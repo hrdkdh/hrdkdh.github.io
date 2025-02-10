@@ -45,14 +45,26 @@ body {
 }
 #leftside > ul > ul {
     margin-top:4px;
-    margin-left:20px;
+    margin-left:24px;
     cursor:pointer;
 }
 #leftside > ul > ul > li {
     margin-top:4px;
     font-size:12pt;
+    word-break: keep-all;
     transition-duration: 0.3s;
 }
+#leftside > ul > ul > li:before {
+    content: '';
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    background-image: url('icon_dot.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -18px;
+    margin-bottom: -3px;
+  }
 #leftside > ul > ul > li:hover {
     background:#a6e3ff;
     font-weight: bold;
