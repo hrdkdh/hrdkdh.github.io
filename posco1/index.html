@@ -20,6 +20,7 @@ $(document).ready(function(){
         var prompt = data[$(this).attr("chapter")][$(this).text()];
         showRightSide(prompt);
         $(this).css({"color": "white", "background": "rgb(25 183 255)", "font-weight":"bold"});
+        $("html").animate({scrollTop:0}, 500);
     });
     $(document).on("click", ".copy_icon", function(){
         copyToClipboard($(this).prev().html().br2nl());
