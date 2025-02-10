@@ -17,6 +17,8 @@ $(document).ready(function(){
 </script>
 <style>
 body {
+    margin:0px;
+    padding:0px;
     background:#f0f0f0;
 }
 #container {
@@ -44,17 +46,37 @@ body {
     width:100%;
     text-align: center;
     text-decoration: none;
-    color: #1b4057;
+    color: #05507d;
     font-size: 20pt;
     font-weight:bold;
 }
+#header {
+    width:calc(100% - 0px);
+    padding:14px 0px;
+    text-align:center;
+    margin:0px 0px 20px 0px;
+    background:#05507d;
+    color:#fff;
+    font-size:18pt;
+    font-weight:bold;
+}
+#footer {
+    width:calc(100% - 0px);
+    text-align:center;
+    margin:20px 0px;
+}
+#footer > img {
+    width:160px;
+}
 </style>
 <body>
+    <div id="header">생성AI 실습 프롬프트</div>
     <div id="container">
         <div><span goto="wxleader/index.html">직책자<br>WX워크숍</span></div>
         <div><span goto="wxbasic/index.html">WX기초과정</span></div>
         <div><span goto="posco1/index.html">포스코<br>경영지원본부</span></div>
         <div><span goto="posri/index.html">포스리</span></div>
     </div>
+    <div id="footer"><img src="logo.svg"></div>
 </body>
 </html>
