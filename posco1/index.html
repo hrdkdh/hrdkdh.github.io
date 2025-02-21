@@ -43,7 +43,12 @@ const makeLeftSide = (data) => {
 const showRightSide = (prompt_content) => {
     $('#rightside').html(``);
     prompt_content.forEach((element) => {
-        $('#rightside').append(`<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div><div class="copy_icon"><img src="../icon_copy.svg"><br><span>복사하기</span></div></div>`);
+        html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div><div class="copy_icon"><img src="../icon_copy.svg"><br><span>복사하기</span></div></div>`
+        //element에 a 태그가 들어간 경우
+        if (element.includes("<a href=\"")) {
+            html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div></div>`
+        }
+        $('#rightside').append(html_src);
     });
 }
 const copyToClipboard = (text) =>{
