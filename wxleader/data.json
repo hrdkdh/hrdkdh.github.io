@@ -1,17 +1,22 @@
 data_json = {
   "★생성AI 사이트" : {
     "바로가기 링크" : [
-      "ChatGPT : <a href=\"https://chatgpt.com/\" target=\"_blank\">https://chatgpt.com/</a>",
-      "Ideogram : <a href=\"https://ideogram.ai/\" target=\"_blank\">https://ideogram.ai/</a>",
-      "Bing Image Creator : <a href=\"https://www.bing.com/images/create\" target=\"_blank\">https://www.bing.com/images/create</a>",
-      "Autodraw : <a href=\"https://www.autodraw.com/\" target=\"_blank\">https://www.autodraw.com/</a>",
-      "NapkinAI : <a href=\"https://www.napkin.ai/\" target=\"_blank\">https://www.napkin.ai/</a>",
-      "Lilys : <a href=\"https://lilys.ai/\" target=\"_blank\">https://lilys.ai/</a>",
-      "GammaAI : <a href=\"https://gamma.app/ko\" target=\"_blank\">https://gamma.app/ko</a>",
-      "HeyGen : <a href=\"https://www.heygen.com/\" target=\"_blank\">https://www.heygen.com/</a>",
-      "Suno : <a href=\"https://suno.com/home\" target=\"_blank\">https://suno.com/home</a>",
-      "Grok : <a href=\"https://grok.com/\" target=\"_blank\">https://grok.com/</a>",
-      "Adobe Firefly : <a href=\"https://firefly.adobe.com/\" target=\"_blank\">https://firefly.adobe.com/</a>"
+      "1. ChatGPT : <a href=\"https://chatgpt.com/\" target=\"_blank\">https://chatgpt.com/</a>",
+      "2. Copilot : <a href=\"https://copilot.cloud.microsoft/\" target=\"_blank\">https://copilot.cloud.microsoft/</a>",
+      "3. Gemini : <a href=\"https://gemini.goolgle.com/\" target=\"_blank\">https://gemini.goolgle.com/</a>",
+      "4. Grok : <a href=\"https://grok.com/\" target=\"_blank\">https://grok.com/</a>",
+      "5. Felo : <a href=\"https://felo.ai/ko/\" target=\"_blank\">https://felo.ai/ko/</a>",
+      "6. Ideogram : <a href=\"https://ideogram.ai/\" target=\"_blank\">https://ideogram.ai/</a>",
+      "7. GoogleFX : <a href=\"https://labs.google/fx/ko/\" target=\"_blank\">https://labs.google/fx/ko/</a>",
+      "8. Bing Image Creator : <a href=\"https://www.bing.com/images/create\" target=\"_blank\">https://www.bing.com/images/create</a>",
+      "9. Lilys : <a href=\"https://lilys.ai/\" target=\"_blank\">https://lilys.ai/</a>",
+      "10. Daglo : <a href=\"https://daglo.ai/\" target=\"_blank\">https://daglo.ai/</a>",
+      "11. Youtube : <a href=\"https://www.youtube.com/\" target=\"_blank\">https://www.youtube.com/</a>",
+      "12. NapkinAI : <a href=\"https://www.napkin.ai/\" target=\"_blank\">https://www.napkin.ai/</a>",
+      "13. Autodraw : <a href=\"https://www.autodraw.com/\" target=\"_blank\">https://www.autodraw.com/</a>",
+      "14. GammaAI : <a href=\"https://gamma.app/ko/\" target=\"_blank\">https://gamma.app/ko/</a>",
+      "15. HeyGen : <a href=\"https://www.heygen.com/\" target=\"_blank\">https://www.heygen.com/</a>",
+      "16. Suno : <a href=\"https://suno.com/home\" target=\"_blank\">https://suno.com/home</a>",
     ]
   },
   "1. 생성 AI 개요": {
