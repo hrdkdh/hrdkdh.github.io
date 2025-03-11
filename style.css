@@ -85,6 +85,18 @@ body {
     background:#f0f0f0;
     overflow:auto;
 }
+#rightSideWrapper {
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#rightSideWrapper > div > img {
+    width: calc(100% - 40px);
+    max-width: 300px;
+    margin:20px;
+}
 .prompt_element {
     max-width:1000px;
     margin:15px 10px;

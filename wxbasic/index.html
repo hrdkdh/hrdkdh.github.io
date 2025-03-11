@@ -37,7 +37,7 @@ const makeLeftSide = (data) => {
         html += `</ul>`;
     });
     html += `</ul>`;
-    html += `<div id="footer"><img src="../logo.svg"></div>`;
+    html += `<div id="footer"><img src="../logo_pgu.svg"></div>`;
     $('#leftside').html(html);
 }
 const showRightSide = (prompt_content) => {
@@ -154,7 +154,12 @@ String.prototype.br2nl = function() {
 <body>
     <div id="container">
         <div id="leftside"></div>
-        <div id="rightside">왼쪽 메뉴에서 내용을 클릭해 주세요.</div>
+        <div id="rightside">
+            <div id="rightSideWrapper">
+                <div><img src="../logo_wx.svg"></div>
+                <div>왼쪽 메뉴에서 내용을 클릭해 주세요.</div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
