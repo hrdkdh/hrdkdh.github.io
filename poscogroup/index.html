@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>경영지원본부 실습 프롬프트</title>
+	<title>포스코그룹 공통교육 실습 프롬프트</title>
     <link rel="stylesheet" href="../style.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -42,11 +42,13 @@ const makeLeftSide = (data) => {
 }
 const showRightSide = (prompt_content) => {
     $('#rightside').html(``);
+    var elem_no = 0;
     prompt_content.forEach((element) => {
-        html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div><div class="copy_icon"><img src="../icon_copy.svg"><br><span>복사하기</span></div></div>`
-        //element에 a 태그가 들어간 경우
-        if (element.includes("<a href=\"")) {
-            html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div></div>`
+        if (typeof element === 'object') { //element가 js dictionary 자료형이라면 → 복사 버튼 없이 출력
+            elem_no++;
+            html_src = `<div class="prompt_element"><div class="prompt_string">${elem_no}. <strong>${element["서비스명"]}</strong>(${element["분류"]}) <a href="${element["링크"]}" target="_blank">${element["링크"]}</a></div></div>`
+        } else {
+            html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div><div class="copy_icon"><img src="../icon_copy.svg"><br><span>복사하기</span></div></div>`            
         }
         $('#rightside').append(html_src);
     });
