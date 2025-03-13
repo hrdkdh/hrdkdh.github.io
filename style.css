@@ -116,6 +116,7 @@ body {
 .prompt_element > .prompt_string {
     font-size:14pt;
     line-height:160%;
+    cursor:default;
 }
 .prompt_element > .copy_icon {
     font-weight:bold;
