@@ -18,6 +18,9 @@ data_json = {
       { "분류" : "발표자료AI", "서비스명" : "GammaAI", "링크" : "https://gamma.app/ko/" },
       { "분류" : "딥페이크AI", "서비스명" : "HeyGen", "링크" : "https://www.heygen.com/" },
       { "분류" : "음악AI", "서비스명" : "Suno", "링크" : "https://suno.com/home/" }
+    ],
+    "실습파일 다운로드" : [
+      { "분류" : "실습파일", "서비스명" : "다운로드 링크", "링크" : "material.zip" }
     ]
   },
   "1. 생성 AI 개요": {
