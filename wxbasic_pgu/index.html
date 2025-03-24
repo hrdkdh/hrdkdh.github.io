@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko/kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>WX기초과정 실습 프롬프트</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="../method.js"></script>
+</head>
+<script src="data.json" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+    let data = JSON.parse(JSON.stringify(data_json));
+    makeLeftSide(data);
+
+    $(document).on("click", ".prompt_button", function(){
+        $(".prompt_button").css({"color" : "", "background":"", "font-weight":""});
+        var prompt = data[$(this).attr("chapter")][$(this).text()];
+        showRightSide(prompt);
+        $(this).css({"color": "white", "background": "rgb(25 183 255)", "font-weight":"bold"});
+        $("html").animate({scrollTop:0}, 500);
+    });
+    $(document).on("click", ".copy_icon", function(){
+        copyToClipboard($(this).prev().html().br2nl());
+    });
+});
+</script>
+<body oncontextmenu="return false" onselectstart="return false" ondragstart="return false">
+    <div id="container">
+        <div id="leftside"></div>
+        <div id="rightside">
+            <div id="rightSideWrapper">
+                <div><img src="../logo_wx.svg"></div>
+                <div>왼쪽 메뉴에서 내용을 클릭해 주세요.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
