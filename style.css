@@ -114,6 +114,7 @@ body {
     height:60px;
 }
 .prompt_element > .prompt_string {
+    white-space: pre-wrap;
     font-size:14pt;
     line-height:160%;
     cursor:default;
