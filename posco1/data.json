@@ -3,7 +3,7 @@ data_json = {
     "바로가기 링크" : [
       { "분류" : "대화형AI", "서비스명" : "ChatGPT", "링크" : "https://chatgpt.com/" },
       { "분류" : "대화형AI", "서비스명" : "Copilot", "링크" : "https://copilot.cloud.microsoft/" },
-      { "분류" : "대화형AI", "서비스명" : "Gemini", "링크" : "https://gemini.goolgle.com/" },
+      { "분류" : "대화형AI", "서비스명" : "Gemini", "링크" : "https://gemini.google.com/" },
       { "분류" : "대화형AI", "서비스명" : "Grok", "링크" : "https://grok.com/" },
       { "분류" : "대화형AI", "서비스명" : "Felo", "링크" : "https://felo.ai/ko/" },
       { "분류" : "대화형AI", "서비스명" : "뤼튼", "링크" : "https://wrtn.ai/" },
