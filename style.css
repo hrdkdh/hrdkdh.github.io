@@ -109,17 +109,26 @@ body {
 .prompt_element > div {
     margin:0px 10px;
 }
-.prompt_element > div > img {
-    width:60px;
-    height:60px;
+.prompt_element > .prompt_element_wrapper {
+    display: flex;
+    flex-direction: column;
 }
-.prompt_element > .prompt_string {
+.prompt_element .prompt_string {
+    text-align:left;
     white-space: pre-wrap;
     font-size:14pt;
     line-height:160%;
     cursor:default;
 }
+.prompt_element .prompt_attached > img {
+    width:calc(100% - 20px);
+    max-width:600px;
+}
 .prompt_element > .copy_icon {
     font-weight:bold;
     cursor:pointer;
+}
+.prompt_element > .copy_icon > img {
+    width:60px;
+    height:60px;
 }

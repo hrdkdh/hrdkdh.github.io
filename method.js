@@ -16,11 +16,27 @@ const showRightSide = (prompt_content) => {
     $('#rightside').html(``);
     var elem_no = 0;
     prompt_content.forEach((element) => {
-        if (typeof element === 'object') { //element가 js dictionary 자료형이라면 → 복사 버튼 없이 출력
+        if (element.복사여부 == false) {
             elem_no++;
-            html_src = `<div class="prompt_element"><div class="prompt_string">${elem_no}. <strong>${element["서비스명"]}</strong>(${element["분류"]}) <a href="${element["링크"]}" target="_blank">${element["링크"]}</a></div></div>`
+            html_src = `
+                <div class="prompt_element">
+                    <div class="prompt_string">${elem_no}. <strong>${element["서비스명"]}</strong>(${element["분류"]}) <a href="${element["링크"]}" target="_blank">${element["링크"]}</a></div>
+                </div>`;
         } else {
-            html_src = `<div class="prompt_element"><div class="prompt_string">${element.nl2br()}</div><div class="copy_icon"><img src="../icon_copy.svg"><br><span>복사하기</span></div></div>`            
+            var added = "";
+            if (element.추가자료 != "") {
+                added = `<div class="prompt_attached">${element.추가자료}</div>`;
+            }
+            html_src = `
+                <div class="prompt_element">
+                    <div class="prompt_element_wrapper">
+                        <div class="prompt_string">${element.프롬프트.trim().nl2br()}</div>
+                        ${added}
+                    </div>
+                    <div class="copy_icon">
+                        <img src="../icon_copy.svg"><br><span>복사하기</span>
+                    </div>
+                </div>`;
         }
         $('#rightside').append(html_src);
     });
@@ -124,3 +140,19 @@ String.prototype.br2nl = function() {
 	var ret = this.replace(/<br>/g, "\n")
 	return ret;
 }
+
+$(document).ready(function(){
+    let data = JSON.parse(JSON.stringify(data_json));
+    makeLeftSide(data);
+
+    $(document).on("click", ".prompt_button", function(){
+        $(".prompt_button").css({"color" : "", "background":"", "font-weight":""});
+        var prompt = data[$(this).attr("chapter")][$(this).text()];
+        showRightSide(prompt);
+        $(this).css({"color": "white", "background": "rgb(25 183 255)", "font-weight":"bold"});
+        $("html").animate({scrollTop:0}, 500);
+    });
+    $(document).on("click", ".copy_icon", function(){
+        copyToClipboard($(this).parent().find(".prompt_string").html().br2nl());
+    });
+});
