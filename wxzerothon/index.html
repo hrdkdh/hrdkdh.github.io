@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>WX제로톤</title>
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 </head>
 <script>
@@ -14,8 +15,183 @@ $(document).ready(function(){
 });
 </script>
 <body>
-    <div id="container">
-        <img src="poster_wxzerothon.png">
-    </div>
+    <!-- 헤더 -->
+    <header>
+        <div>
+            <div>
+                <img src="images/logo.png" alt="WX제로톤 로고"/>
+            </div>
+            <nav>
+                <a href="#about">소개</a>
+                <a href="#schedule">일정</a>
+                <a href="#apply">참가신청</a>
+                <a href="#benefits">혜택</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <div>
+                <a href="#apply" class="btn_apply">지금 신청하기</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- 포스터 섹션 -->
+        <section id="poster">
+            <div style="background-image: url('images/grid-pattern.svg');"></div>
+            <div>
+                <div>
+                <h1>
+                    <span>포스코그룹 최초 노코드 AI 업무혁신 페스티벌!</span>
+                    <span>WX제로톤 2025 - Zero to Infinity</span>
+                </h1>
+                <p>코딩 없이 누구나 가볍게 참여할 수 있는 노코드 솔루션 개발대회에 여러분을 초대합니다!</p>
+                </div>
+                <div>
+                <a href="#apply">참가 신청하기</a>
+                <a href="#about">자세히 알아보기</a>
+                </div>
+                <div>
+                <img src="images/poster.png" alt="WX제로톤 2025 포스터"/>
+                </div>
+            </div>
+        </section>
+    
+        <!-- 소개 섹션 -->
+        <section id="about">
+        <div>
+            <div>
+            <h2>어려운 코딩 없이, AI로 스마트하게 일하고 싶은 사람 모여라! 🚀</h2>
+            <p>
+                AI로 더 똑똑하게, 더 즐겁게 일하고 싶은 포스코그룹 직원들이 모여 나와 우리 조직을 변화시킬 솔루션을
+                제작하는 24시간 실전 챌린지!
+            </p>
+            </div>
+    
+            <div>
+            <div>
+                <h3>✨ 행사 주제</h3>
+            </div>
+            <div>
+                <p>다양한 디지털 도구를 활용하여 나와 조직의 업무 생산성을 향상시키는 AI 서비스 제작</p>
+                <div>
+                <p>활용 기술:</p>
+                <p>노코드도구(Copilot Studio, Dataiku, Streamlit), 생성AI(GPT, Midjourney), 코딩(Cursor AI), 팀업(Teams)</p>
+                </div>
+                <div>
+                <p>결과물:</p>
+                <p>AI 에이전트, 머신러닝 모델, 데이터 분석, 대시보드, RPA, 웹 서비스, 업무자동화</p>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                <h3>💡 아이디어 예시</h3>
+                </div>
+                <div>
+                <ul>
+                    <li>대량의 문서 처리, 데이터 예측, 기술동향 분석, 지능형 의사결정 등 인력 의존도가 높은 업무 개선</li>
+                    <li>경영/조직 실적 Data 자동 집계 후 분석결과 메일링</li>
+                    <li>현장 작업계소 이미지 분석 후 안전 위험요소 사전 알람 서비스</li>
+                </ul>
+                </div>
+            </div>
+            </div>
+    
+            <div>
+            <div>
+                <h3>🏆 지원 자격</h3>
+            </div>
+            <div>
+                <p>AI에 관심있는 포스코그룹 임직원 누구나 (3인 1팀 구성)</p>
+                <ul>
+                <li>소속회사, 전공/직무, 근속연수, 개발지식 무관</li>
+                <li>온라인 팀빌딩(5.26) 및 제로톤 본선(6.12~13)참석 가능팀</li>
+                <li>반짝이는 아이디어만 있다면 OK! 소속회사, 전공/직무 상관없이 누구나!</li>
+                </ul>
+            </div>
+    
+            <div>
+                <div>
+                <h3>🛠️ 활용 도구</h3>
+                </div>
+                <div>
+                <p>요즘 대세 ChatGPT부터 Streamlit, Cursor AI까지 쓱쓱 잘하는 노코드 툴로, 착착 돌아가는 AI 서비스를 만들 수 있어요.</p>
+                <div>
+                    <p>ChatGPT</p>
+                    <p>Streamlit</p>
+                    <p>Cursor AI</p>
+                    <p>Copilot Studio</p>
+                    <p>Dataiku</p>
+                    <p>Teams</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+    
+        <!-- 일정 섹션 -->
+        <section id="schedule">
+        <div>
+            <div>
+            <h2>진행 일정</h2>
+            <p>WX제로톤 2025의 전체 일정을 확인해보세요!</p>
+            </div>
+    
+            <div>
+            <div>
+                <div>
+                <h3>신청서 심사 결과 발표</h3>
+                <p>5.8(목) * 메일 안내</p>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                <h3>아이디어 투표 및 굴리기</h3>
+                <p>5.12(월) ~ 16(금)</p>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                <h3>최종 선발 결과 발표</h3>
+                <p>5.22(수) * 메일 안내</p>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                <h3>온라인 팀빌딩 및 전문가 멘토링</h3>
+                <p>5.26(월) ~ 6.5(수) * 별도 안내</p>
+                </div>
+            </div>
+    
+            <div>
+                <div>
+                <h3>제로톤 본선(서비스 개발 및 수행결과 발표/시상)</h3>
+                <p>6.12(목) 08시 ~ 6.13(금) 17시, 1박 2일</p>
+                <p>인재창조원 송도캠퍼스 컨벤션센터 이벤트홀</p>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+    
+        <!-- 이후 섹션: 선발 기준, 참가 혜택, 신청 안내, FAQ 등 동일하게 변환 가능 -->
+    </main>
+    
+    <!-- 푸터 -->
+    <footer>
+        <div>
+        <div>
+            <img src="images/logo.png" alt="WX제로톤 로고"/>
+        </div>
+        <p>
+            © 2025 포스코인재창조원 All rights reserved.<br />
+            포스코인재창조원 디지털직무교육그룹
+        </p>
+        </div>
+    </footer>
 </body>
 </html>
