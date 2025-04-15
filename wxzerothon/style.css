@@ -1,5 +1,6 @@
 * {
     font-family: 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
 }
 input, textarea {
     font-family: 'Malgun-gothic';
