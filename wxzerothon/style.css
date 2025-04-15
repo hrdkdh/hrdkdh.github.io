@@ -103,13 +103,15 @@ section#poster > div {
     align-items: center;
 }
 section#poster > div > div:first-child {
+    line-height:120%;
     margin: 40px 0px 0px 0px;
     font-size:40pt;
     font-weight: bold;
     color:rgb(255, 255, 255);
 }
 section#poster > div > div:nth-child(2) {
-    margin: 0px 0px 0px 0px;
+    line-height:120%;
+    margin: 10px 0px 0px 0px;
     font-size:40pt;
     font-weight: bold;
     color:rgb(80 228 208);
@@ -156,7 +158,7 @@ section#about > div:first-child > div:last-child {
     word-break:keep-all;
 }
 section#about > div:last-child {
-    margin: 80px 0px;
+    margin: 20px 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -415,4 +417,7 @@ footer {
     width:calc(100% - 20px);
     padding: 40px 10px;
     text-align: center;
+}
+footer > h4 {
+    font-size:14pt;
 }
