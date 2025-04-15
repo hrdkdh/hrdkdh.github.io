@@ -14,15 +14,39 @@ a {
     text-decoration: none;
     color: inherit;
 }
+h2 {
+    margin:0px;
+    font-size:30pt;
+    font-weight: bold;
+    word-break: keep-all;
+}
+h3 {
+    font-size:20pt;
+    font-weight:bold;
+    margin:20px 0px 0px 0px;
+    word-break: keep-all;
+}
+h3 > span {
+    margin:0px;
+    font-size:16pt;
+    word-break: keep-all;
+}
+h4 {
+    font-size:16pt;
+    margin:10px 0px 0px 0px;
+    font-weight: normal;
+    word-break: keep-all;
+}
 header {
     width:100%;
     text-align: center;
     border-bottom: solid 1px #e8e8e8;
 }
 header > div {
-    width:100%;
-    max-width: 1600px;
-    margin: 0 auto;
+    width:calc(100% - 20px);
+    max-width: 1400px;
+    margin: 0px auto;
+    padding: 0px 10px;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,8 +63,19 @@ header > div > nav > a {
     font-size:14pt;
     font-weight:bold;
 }
-section#poster {
-    text-align:center;
+main {
+    width:100%;
+    max-width: 2000px;
+    margin:0px auto;
+}
+main > section {
+    width:calc(100% - 20px);
+    max-width: 1400px;
+    margin:0px auto;
+    padding: 0px 10px;
+}
+main > section > div > * {
+    word-break:keep-all;
 }
 .btn_apply {
     background-color: #4CAF50;
@@ -52,4 +87,332 @@ section#poster {
 }
 .btn_apply:hover {
     background-color: #63bc67;
+}
+section#poster {
+    width:100%;
+    max-width: 2000px;
+    text-align:center;
+    background:url("images/poster_background.png");
+    padding: 0px 0px 40px 0px;
+}
+section#poster > div {
+    margin: 0px 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section#poster > div > div:first-child {
+    margin: 40px 0px 0px 0px;
+    font-size:40pt;
+    font-weight: bold;
+    color:rgb(255, 255, 255);
+}
+section#poster > div > div:nth-child(2) {
+    margin: 0px 0px 0px 0px;
+    font-size:40pt;
+    font-weight: bold;
+    color:rgb(80 228 208);
+}
+section#poster > div > div:nth-child(3) {
+    margin: 0px 0px 10px 0px;
+    font-size:20pt;
+    color:rgb(255, 255, 255);
+}
+section#poster > div > div:nth-child(4) {
+    margin: 0px 0px 60px 0px;
+}
+section#poster > div > div:nth-child(4) > a {
+    margin:0px 4px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+section#poster > div > div:last-child > img {
+    width:calc(100% - 20px);
+    max-width:1000px;
+}
+section#about {
+    padding: 40px 0px 20px 0px;
+}
+section#about > div:first-child >  {
+    width:100%;
+    margin:20px 0px;
+    text-align:center;
+}
+section#about > div:first-child > div:first-child {
+    margin-bottom: 10px;
+    font-size:20pt;
+    font-weight:bold;
+    text-align:center;
+    word-break:keep-all;
+}
+section#about > div:first-child > div:last-child {
+    font-size:16pt;
+    color:rgb(80, 80, 80);
+    text-align:center;
+    word-break:keep-all;
+}
+section#about > div:last-child {
+    margin: 80px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+section#about > div:last-child > div {
+    width:calc(100% - 20px);
+    max-width: 680px;
+    margin:0px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+section#about > div:last-child > div > div {
+    width:calc(100% - 50px);
+    margin:0px 20px;
+    max-width:700px;
+}
+section#about > div:last-child > div > div > div > p {
+    font-size:17pt;
+}
+section#about > div:last-child > div > div > div > ul {
+    margin:0px 0px 10px 20px;
+    padding:0px 0px 0px 30px;
+    border-left:4px solid #e5e7eb;
+}
+section#about > div:last-child > div > div > div > ul > li {
+    margin:10px 0px;
+    font-size:13pt;
+}
+section#schedule {
+    width:100%;
+    max-width: 2000px;
+    text-align:center;
+    padding: 40px 0px 40px 0px;
+    background:rgb(201, 222, 251, 0.5);
+}
+section#schedule > div {
+    width:calc(100% - 20px);
+    margin:0px auto;
+    margin-bottom:20px;
+}
+section#schedule > div:last-child {
+    width:100%;
+    max-width:700px;
+    margin:40px auto;
+    text-align: center;
+}
+section#schedule > div:last-child > img {
+    width:30px;
+}
+section#schedule > div:last-child > div {
+    width:calc(100% - 80px);
+    margin:10px 20px;
+    padding:20px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+section#schedule > div:last-child > div > p {
+    margin:10px 0px 0px 0px;
+    font-size:14pt;
+    font-weight: normal;
+}
+
+section#selection {
+    width:100%;
+    max-width: 2000px;
+    text-align:center;
+    padding: 40px 0px 40px 0px;
+}
+section#schedule > div {
+    width:calc(100% - 20px);
+    margin:0px auto;
+    margin-bottom:20px;
+}
+section#selection > div:last-child {
+    max-width:700px;
+    margin:40px auto;
+    text-align: center;
+}
+section#selection > div:last-child > img {
+    width:30px;
+}
+section#selection > div:last-child > div {
+    width:calc(100% - 80px);
+    margin:10px 20px;
+    padding:20px;
+    background: rgb(17, 84, 150);
+    border-radius: 10px;
+}
+section#selection > div:last-child > div > h3 {
+    color:rgb(255, 255, 255);
+    word-break: keep-all;
+}
+section#selection > div:last-child > div > p {
+    margin:0px;
+    font-size:14pt;
+    color:rgb(255, 255, 255, 0.8);
+}
+section#benefits {
+    width:100%;
+    max-width: 2000px;
+    text-align:center;
+    padding: 40px 0px 40px 0px;
+    background:linear-gradient(to top left, rgba(17, 84, 150, 0.6), rgb(17, 84, 150));
+}
+section#benefits > div {
+    width:calc(100% - 20px);
+    margin:0px auto;
+    margin-bottom:20px;
+}
+section#benefits h2,
+section#benefits h4 {
+    color:rgb(255, 255, 255);
+}
+section#benefits > div > p {
+    margin:0px;
+    font-size:16pt;
+    font-weight: normal;
+    color:rgb(255, 255, 255);
+}
+section#benefits > div > div > p {
+    font-size:14pt;
+}
+section#benefits > div:nth-child(2),
+section#benefits > div:nth-child(4) {
+    max-width:1200px;
+    margin:0 auto;
+    margin-bottom: 40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section#benefits > div > div {
+    width:500px;
+    margin:10px 10px;
+    padding:20px;
+    background: rgb(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+section#benefits > div:last-child {
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+section#benefits > div:last-child > div {
+    width:100%;
+    max-width:316px;
+    margin:10px 10px;
+    padding:10px;
+    background: rgb(255, 255, 255, 0.96);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+section#apply {
+    width:calc(100% - 20px);
+    max-width: 2000px;
+    text-align:center;
+    padding: 40px 0px 40px 0px;
+}
+section#apply > div {
+    margin:0px 0px 20px 0px;
+}
+section#apply > div > p {
+    margin:0px;
+    font-size:16pt;
+    font-weight: normal;
+}
+section#apply > div:last-child {
+    width:calc(100% - 40px);
+    max-width:800px;
+    margin:40px auto;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding:0px 20px 20px 20px;
+}
+section#apply > div:last-child > div {
+    margin:20px 0px;
+}
+section#apply > div:last-child > div > h3 {
+    margin:0px 0px 10px 0px;
+    padding:0px;
+}
+section#apply > div:last-child > div > p {
+    font-size:14pt;
+    font-weight:normal;
+    margin:0px 0px 10px 0px;
+    padding:0px;
+    color:rgb(0, 0, 0, 0.75);
+    line-height:160%;
+}
+section#apply > div:last-child > div:last-child {
+    margin:40px 0px;
+    text-align: center;
+}
+
+section#faq {
+    width:100%;
+    max-width: 2000px;
+    text-align:center;
+    padding: 40px 0px 20px 0px;
+    background: rgb(201, 222, 251, 0.2);
+}
+section#faq > div {
+    margin:0px 0px 20px 0px;
+}
+section#faq > #faq_item_wrap {
+    width:calc(100% - 40px);
+    max-width:800px;
+    margin:40px auto;
+    text-align: center;
+}
+section#faq .line {
+    height: 6px;
+    margin:0px 0px 0px 0px !important;
+    border-top:1px solid rgb(228, 227, 226);
+}
+section#faq .faq-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4px 0px;
+}
+section#faq .faq-question {
+    margin:0px 0px 10px 0px;
+    font-size:14pt;
+    text-align: left;
+    font-weight: 700;
+    cursor: pointer;
+}
+section#faq .faq-answer {
+    display:none;
+    margin:0px 0px 10px 10px;
+    font-size:14pt;
+    text-align: left;
+    color:rgb(80, 80, 80);
+}
+section#faq .slide-open {
+    display: block !important;
+}
+
+footer {
+    width:calc(100% - 20px);
+    padding: 40px 10px;
+    text-align: center;
 }
