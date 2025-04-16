@@ -100,7 +100,7 @@ $(document).ready(function(){
     });
     $(document).on("click", ".btn_apply", function(){
         // 서버에서 Blob 데이터를 받아온 경우
-        fetch('/apply_form.pptx')
+        fetch('/wxzerothon/apply_form.pptx')
         .then(response => response.blob())
         .then(blob => {
             const url = window.URL.createObjectURL(blob);
