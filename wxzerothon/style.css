@@ -85,6 +85,7 @@ main > section > div > * {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size:14pt;
 }
 .btn_apply:hover {
     background-color: #63bc67;
