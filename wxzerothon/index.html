@@ -98,6 +98,21 @@ $(document).ready(function(){
             $(this).next().addClass('slide-open');
         }
     });
+    $(document).on("click", ".btn_apply", function(){
+        // 서버에서 Blob 데이터를 받아온 경우
+        fetch('/apply_form.pptx')
+        .then(response => response.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = '한글파일명.pptx'; // 여기에서 원하는 파일명 지정
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
+        });
+    });
 });
 </script>
 <body>
@@ -343,7 +358,7 @@ $(document).ready(function(){
                     <p>4.16(수) ~ 25(금), 10일간</p>
                 </div>
                 <div>
-                    <a href="#" class="btn_apply">신청서 양식 다운로드</a>
+                    <button class="btn_apply">신청서 양식 다운로드</button>
                 </div>
             </div>
         </section>
