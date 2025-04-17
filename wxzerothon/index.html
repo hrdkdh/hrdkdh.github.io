@@ -112,6 +112,12 @@ $(document).ready(function(){
             a.click();
             a.remove();
             window.URL.revokeObjectURL(url);
+            gtag('event', 'form_download', {
+                event_category: 'engagement',
+                event_label: 'form_download_event',
+                value: 1            // 정수 값, 필요 없으면 빼도 됨
+                // send_to: 'G-XXXXXXX' // 속성 ID를 명시하고 싶다면 주석 해제
+            });
         });
     });
 });
