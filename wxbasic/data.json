@@ -104,6 +104,27 @@ data_json = {
                 "복사여부": false
             }
         ],
+        "유용한 GPTs 링크" : [
+            {
+                "분류": "유튜브 숏츠 전략 설계 및 아이디어 실행 도우미",
+                "서비스명": "유튜브 숏츠 도우미",
+                "링크": "https://chatgpt.com/g/g-6806087a8afc819191cfa019ddd1c082-yutyubeu-syosceu-doumi",
+                "복사여부": false
+            },
+            {
+                "분류": "GPT를 설계•생성하는 도우미 GPT",
+                "서비스명": "GPT메이커",
+                "링크": "https://chatgpt.com/g/g-6804b39c10cc819199a6116d315b2f30-gptmeikeo",
+                "복사여부": false
+            },
+            {
+                "분류": "목표 점수 중심 토익 학습 흐름 설계자",
+                "서비스명": "토이 TOEI",
+                "링크": "https://chatgpt.com/g/g-680478f5736c8191ab627d3aa4c7e404-toi-toei",
+                "복사여부": false
+            }
+
+        ],
         "실습파일 다운로드": [
             {
                 "분류": "실습파일",
