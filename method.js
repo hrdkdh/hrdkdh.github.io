@@ -153,6 +153,6 @@ $(document).ready(function(){
         $("html").animate({scrollTop:0}, 500);
     });
     $(document).on("click", ".copy_icon", function(){
-        copyToClipboard($(this).parent().find(".prompt_string").html().br2nl());
+        copyToClipboard($(this).parent().find(".prompt_string").text());
     });
 });
