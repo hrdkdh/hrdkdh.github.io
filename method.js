@@ -150,16 +150,15 @@ $(document).ready(function(){
     getData().then((res) => {
         let data = res;
         makeLeftSide(data);
-    });
-
-    $(document).on("click", ".prompt_button", function(){
-        $(".prompt_button").css({"color" : "", "background":"", "font-weight":""});
-        var prompt = data[$(this).attr("chapter")][$(this).text()];
-        showRightSide(prompt);
-        $(this).css({"color": "white", "background": "rgb(25 183 255)", "font-weight":"bold"});
-        $("html").animate({scrollTop:0}, 500);
-    });
-    $(document).on("click", ".copy_icon", function(){
-        copyToClipboard($(this).parent().find(".prompt_string").html().br2nl().replace(/<[^>]*>/g, ''));
+        $(document).on("click", ".prompt_button", function(){
+            $(".prompt_button").css({"color" : "", "background":"", "font-weight":""});
+            var prompt = data[$(this).attr("chapter")][$(this).text()];
+            showRightSide(prompt);
+            $(this).css({"color": "white", "background": "rgb(25 183 255)", "font-weight":"bold"});
+            $("html").animate({scrollTop:0}, 500);
+        });
+        $(document).on("click", ".copy_icon", function(){
+            copyToClipboard($(this).parent().find(".prompt_string").html().br2nl().replace(/<[^>]*>/g, ''));
+        });
     });
 });
