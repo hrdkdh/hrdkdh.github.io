@@ -141,9 +141,16 @@ String.prototype.br2nl = function() {
 	return ret;
 }
 
+const getData = async() => {
+    const response = await fetch('./data.json');
+    const data = await response.json();
+    return data;
+}
 $(document).ready(function(){
-    let data = JSON.parse(JSON.stringify(data_json));
-    makeLeftSide(data);
+    getData().then((res) => {
+        let data = res;
+        makeLeftSide(data);
+    });
 
     $(document).on("click", ".prompt_button", function(){
         $(".prompt_button").css({"color" : "", "background":"", "font-weight":""});
