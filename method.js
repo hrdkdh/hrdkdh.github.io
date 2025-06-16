@@ -142,7 +142,7 @@ String.prototype.br2nl = function() {
 }
 
 const getData = async() => {
-    const response = await fetch('./data.json?date=250427');
+    const response = await fetch('./data.json?date=250616');
     const data = await response.json();
     return data;
 }
