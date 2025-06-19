@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko/kr">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>포투 기사 모음</title>
+    <link rel="icon" href="../favicon.svg">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+</head>
+<script>
+var test = null;
+$(document).ready(function(){
+    makeTable();
+});
+const makeTable = async () => {
+    const src = await fetch('articles.json');
+    const data = await src.json();
+    const table = $('<table></table>');
+    const thead = $('<thead></thead>');
+    const tbody = $('<tbody></tbody>');
+    const headerRow = $('<tr></tr>');
+    headerRow.append('<th>title</th>');
+    headerRow.append('<th>content</th>');
+    headerRow.append('<th>writer</th>');
+    headerRow.append('<th>time</th>');
+    thead.append(headerRow);
+    data.forEach(row => {
+        const tr = $('<tr></tr>');
+        tr.append(`<td>${row.title}</td>`);
+        tr.append(`<td>${row.content}</td>`);
+        tr.append(`<td>${row.writer}</td>`);
+        tr.append(`<td>${row.time}</td>`);
+        tbody.append(tr);
+    });
+    table.append(thead);
+    table.append(tbody);
+    $('#container table').replaceWith(table);
+    // $('#container').append(table);
+}
+</script>
+
+<body>
+    <div id="container">
+        <table>
+        </table>
+    </div>
+</body>
+</html>
