@@ -1,0 +1,343 @@
+{
+    "★Tools": {
+        "Tool Links": [
+            {
+                "분류": "대화형AI",
+                "서비스명": "ChatGPT",
+                "링크": "https://chatgpt.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "대화형AI",
+                "서비스명": "Copilot",
+                "링크": "https://copilot.cloud.microsoft/",
+                "복사여부": false
+            },
+            {
+                "분류": "대화형AI",
+                "서비스명": "Gemini",
+                "링크": "https://gemini.google.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "대화형AI",
+                "서비스명": "Grok",
+                "링크": "https://grok.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "대화형AI",
+                "서비스명": "Felo",
+                "링크": "https://felo.ai/ko/",
+                "복사여부": false
+            },
+            {
+                "분류": "대화형AI",
+                "서비스명": "뤼튼",
+                "링크": "https://wrtn.ai/",
+                "복사여부": false
+            },
+            {
+                "분류": "이미지AI",
+                "서비스명": "Ideogram",
+                "링크": "https://ideogram.ai/",
+                "복사여부": false
+            },
+            {
+                "분류": "이미지AI",
+                "서비스명": "GoogleFX",
+                "링크": "https://labs.google/fx/ko/",
+                "복사여부": false
+            },
+            {
+                "분류": "이미지AI",
+                "서비스명": "Bing Image Creator",
+                "링크": "https://www.bing.com/images/create",
+                "복사여부": false
+            },
+            {
+                "분류": "요약형AI",
+                "서비스명": "Lilys",
+                "링크": "https://lilys.ai/",
+                "복사여부": false
+            },
+            {
+                "분류": "녹음요약AI",
+                "서비스명": "Daglo",
+                "링크": "https://daglo.ai/",
+                "복사여부": false
+            },
+            {
+                "분류": "영상소스",
+                "서비스명": "Youtube",
+                "링크": "https://www.youtube.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "도식화AI",
+                "서비스명": "NapkinAI",
+                "링크": "https://www.napkin.ai/",
+                "복사여부": false
+            },
+            {
+                "분류": "이미지AI",
+                "서비스명": "Autodraw",
+                "링크": "https://www.autodraw.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "발표자료AI",
+                "서비스명": "GammaAI",
+                "링크": "https://gamma.app/ko/",
+                "복사여부": false
+            },
+            {
+                "분류": "딥페이크AI",
+                "서비스명": "HeyGen",
+                "링크": "https://www.heygen.com/",
+                "복사여부": false
+            },
+            {
+                "분류": "음악AI",
+                "서비스명": "Suno",
+                "링크": "https://suno.com/home/",
+                "복사여부": false
+            }
+        ]
+    },
+    "★Material": {
+        "Download link": [
+            {
+                "분류": "material",
+                "서비스명": "link",
+                "링크": "material.zip",
+                "복사여부": false
+            }
+        ]
+    },
+    "1. Generative AI Overview": {
+        "Text Visualization Tool「Napkin AI」": [
+            {
+                "프롬프트": "Tell me how to work without stress.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Gamma Exercise": [
+            {
+                "프롬프트": "Convert the uploaded PDF into a PPT file, structured into eight slides, and summarize the content in English.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Music Composer 「SUNO」": [
+            {
+                "프롬프트": "Create a heartfelt ballad song that wishes for the health and happiness of POSCO Group's global talents. The mood should be warm, emotional, and inspiring, expressing care and unity across cultures.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    },
+    "2. ChatGPT at a Glance": {
+        "Strategy Formulation": [
+            {
+                "프롬프트": "I’m a franchise consultant planning to open a chicken restaurant in Gangnam, Seoul. The area has high foot traffic and many studio apartments where office workers reside in. Can you create a business model using the Business Model Canvas, and also write a promotional catch phrases using the AIDA framework?",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "I’m a management consultant working with an electric bicycle manufacturer. Recently, we’ve seen a surge in competitors entering the market, which signals the need for new strategic approaches. Please develop appropriate strategies by analyzing the current economic conditions, trends in leisure sports, and conducting a SWOT analysis.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Improvement Measures Derived": [
+            {
+                "프롬프트": "Please answer in English\u000bI’ve uploaded POSCO Holdings’ semiannual report. As an HR department manager, I’m responsible for identifying areas for improvement. Please review the report and summarize HR-related issues that require enhancement using the table format below:\n# Format\n- Structure the table with four columns\n- From Column 1:  Starting with number, title, key content, importance (4-point scale with star rating)",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Identify five key issues, and propose improvement ideas for each",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Drawing 1": [
+            {
+                "프롬프트": "I need you to create an image following the instructions below:\nImage: : There is a sea around the steel mill. The steel mill has a sign titled “POSCO”, and we see a large-scale vessel with three seagulls flying around it. And one Korean male idol member and one Korean female idol member are smiling to welcome customers.\n- Style: Realistic\n- Aspect Ratio: 16:9",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Redraw the selected seagull as an eagle",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Drawing 2": [
+            {
+                "프롬프트": "Please explain how brainstorming works in plain language.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Then, create a Korean-style webtoon for employee training, incorporating the four principles mentioned above. Make a webtoon using English text",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Drawing 3": [
+            {
+                "프롬프트": "The uploaded notice has low resolution and is outdated, so I’d like to create a new image. Please design a poster that delivers the content in a friendly tone for employees. The text should be written in English, and the illustrations should use bright colors.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Scan Image Summary": [
+            {
+                "프롬프트": "Please analyze the uploaded card transaction slip and present the results in the following format \n- Create a table consisting of number, date, place of use, and amount",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "coding": [
+            {
+                "프롬프트": "Please create a Tetris game that works on the web.\nCreate it as a single file using HTML and JavaScript\nInclude arrow keys to rotate, move forward, or shift blocks\nGenerate each block with different colors\nDelete any completed lines without gaps",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "GPTs Utilization - Mind Map Drawing": [
+            {
+                "프롬프트": "Derive a list of items needed for the one-week trip to the western U.S., and convert it into a mind map.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    },
+    "3. Material Survey and Summary": {
+        "GPTs Utilization - Document Summary, Mind Map, and Audio File Creation": [
+            {
+                "프롬프트": "Find five recently published academic papers from the United States on the implications of HRM on organizational performance.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Locate recent articles, papers, and reports on labor-management relations in the manufacturing industry, published by global consulting firms, research institutes, or universities.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Find recent articles, papers, and reports on strategies of global steelmaker brands, published by consulting agencies, research institutes, or universities.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Structure the fifth item clearly and provide a detailed summary",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Extract key words from the content, and draw a mind map accordingly",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "The report above is about Human Resource Management. \nPlease convert it into a one-minute audio file.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    },
+    "4. Data Analysis": {
+        "Graph Analysis": [
+            {
+                "프롬프트": "Give me detailed explanations on the uploaded images",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Collect annual sales and operating income on a consolidated basis from 2019 to 2023 from the POSCO Holdings website. And present the data in a table format.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Use the table to create bar graphs for sales, and create line graphs for operating income.\nInclude the actual figures in each graph.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Create a table showing the average values grouped by gender, age, and RUNPULSE, and then draw a box plot",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Statistical Analysis": [
+            {
+                "프롬프트": "You are a statistics expert. Please analyze the following data.\n- A : 73.4  77.0  73.7  73.3  73.1  71.5  74.5  77.5  76.4  77.7\n- B : 68.7  71.4  69.8  75.3  71.3  72.7  66.9  70.2  74.4  70.1\n ① Hypothesis Setup   \n   - H0: No difference in the population means between the two groups.   \n  - H1: A difference in the population means between the two groups. \n ② Conduct a test to determine if the population means of two groups differ.  (0.05 significance level)\n ③ Draw a box plot to compare them visually\n④ Explain what the results mean in plain language",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "You are a statistics expert. The uploaded file contains data on study time, TV viewing time, gaming time, and test scores. Please, create a table showing the correlations among each variable. And based on the table, draw a heatmap to visualize the relationships",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    },
+    "5. Ideation": {
+        "40 Principles of Invention": [
+            {
+                "프롬프트": "As a TRIZ expert, you are tasked with enhancing the suction power of a vacuum cleaner to improve cleaning performance on carpets and bedding. However, increasing suction causes the nozzle to stick to the surface of the carpets and bedding, making it difficult to use. To resolve this, please apply the most suitable principles from the 40 Inventive Principles. \nGive me details",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "SCAMPER": [
+            {
+                "프롬프트": "You are a top-tier education expert tasked with designing a distinguished digital capability-building program. Previously, you offered basic Python and data analysis training through 1–2 day group sessions for employees. However, the educational impact has been low, primarily due to limited real-world applicability. Your goal now is to help employees sharpen their digital skills and deliver training with greater practical relevance.\nUsing the SCAMPER method, generate brilliant ideas.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Brainstorming": [
+            {
+                "프롬프트": "Ideation for Occupational Accident Prevention You are an expert in idea discovery, tasked with generating solutions to reduce frequent workplace accidents, such as entrapment, falls, falling objects, and explosions, at apartment construction sites. A brainstorming session is held with three participants, each bringing a unique perspective: Participant A is a critical thinker while participant B is a creative thinker. Participant C is an economic thinker. \nFrom each viewpoint, three ideas are generated to address accident prevention.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ],
+        "Linear Programming": [
+            {
+                "프롬프트": "You are a management science expert tasked with optimizing production. Product A requires 5 kg of raw materials and 1 kWh of electricity per kilogram, while Product B requires 3 kg of raw materials and 3 kWh of electricity per kilogram. The profit per kilogram is ₩4,000 for Product A and ₩7,000 for Product B. The factory is limited to 21 kg of raw materials and 9 kWh of electricity per hour. Using linear programming, solve this problem.",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    },
+    "6. Drafting": {
+        "Dialogue-Type Prompt Utilization Example": [
+            {
+                "프롬프트": "From this point forward, please follow the conditions below.\n 1. Apply the hyperparameters, ‘top_p=0.1, temperature=0.1.’\n 2. Assume the role of a communication facilitator at POSCO.\n 3. Responses should be on par with the answer levels of a professional in workplace communication and conflict. resolution \n4. Utilize information sourced from research institutes, government publications, academic papers, journals, published materials, and encyclopedias.",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "I need to formulate a plan on how to facilitate generational communication to report it to the CEO. \nPlease compose the table of contents below, including two or three detailed content points for each section.\n(1. Background, 2. Status and Problems, 3. Approach to Improvements, 4. Concrete Action Plans, and 5. Conclusions)",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Please provide two to three sentences of each concrete content",
+                "추가자료": "",
+                "복사여부": true
+            },
+            {
+                "프롬프트": "Open Canvas",
+                "추가자료": "",
+                "복사여부": true
+            }
+        ]
+    }
+}

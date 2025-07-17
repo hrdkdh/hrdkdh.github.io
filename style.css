@@ -28,6 +28,7 @@ body {
 }
 #leftside {
     min-width:310px;
+    max-width: 380px;
     margin:0px;
     padding:10px 0px 30px 0px;
     background:#ebf8ff;
