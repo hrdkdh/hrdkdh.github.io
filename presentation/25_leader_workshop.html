@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 시대 HRD의 미래 - 인터랙티브 토론 요약</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Harmony (Stone, Slate, Soft Blue) -->
+    <!-- Application Structure Plan: A single-page dashboard with three main interactive tabs: 1) Overall Analysis (comparing optimistic/pessimistic views with a doughnut chart), 2) New HRD Roles (using interactive cards), and 3) Participant Views (a clickable grid of profiles that displays details dynamically). This structure organizes complex information from general to specific, enhancing user exploration and preventing cognitive overload from a long, linear document. -->
+    <!-- Visualization & Content Choices: 1. Doughnut Chart (Chart.js): Goal is to compare the two main future scenarios discussed. A doughnut chart is a simple, effective way to show proportions. Interaction: Tooltips on hover. 2. Interactive Cards (HTML/CSS/JS): Goal is to organize the four proposed HRD roles and the six participant views. Clicking to reveal details reduces initial clutter and encourages user engagement. This is better than a static list for usability. CONFIRMATION: NO SVG/Mermaid used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .tab-active {
+            border-color: #3b82f6;
+            color: #3b82f6;
+            font-weight: 700;
+        }
+        .participant-card-active {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            border-color: #3b82f6;
+        }
+        .content-fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-7xl">
+        
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">AI가 바꾸는 HRD의 미래</h1>
+            <p class="mt-2 text-lg sm:text-xl text-slate-600">포스코인재창조원 '25년 직책자 워크숍 사전 토론(4조) 결과</p>
+        </header>
+
+        <main>
+            <div class="w-full bg-white rounded-xl shadow-lg p-4 sm:p-6">
+                <nav class="flex border-b border-slate-200 mb-6">
+                    <button data-tab="analysis" class="tab-btn tab-active py-3 px-4 sm:px-6 text-sm sm:text-base border-b-2 border-transparent transition-colors duration-300">종합 분석</button>
+                    <button data-tab="roles" class="tab-btn py-3 px-4 sm:px-6 text-sm sm:text-base border-b-2 border-transparent text-slate-500 transition-colors duration-300">HRD의 새로운 역할</button>
+                    <button data-tab="participants" class="tab-btn py-3 px-4 sm:px-6 text-sm sm:text-base border-b-2 border-transparent text-slate-500 transition-colors duration-300">참석자별 의견</button>
+                </nav>
+
+                <div id="tab-content">
+                    
+                    <section id="analysis" class="tab-pane">
+                        <div class="p-2">
+                            <h2 class="text-2xl font-bold mb-2 text-slate-900">미래 변화 전망: 두 가지 시선</h2>
+                            <p class="text-slate-600 mb-6">토론에서는 AI 시대의 미래를 두고 '현실적/비관적' 시각과 '이상적/낙관적' 시각이 제시되었습니다. 참석자들은 기술 발전 속도와 조직의 수용성 사이의 간극을 주요 변수로 인식했으며, 이는 아래 차트와 같이 두 가지 핵심 시나리오에 대한 전망으로 나타났습니다.</p>
+                            
+                            <div class="grid md:grid-cols-5 gap-8 items-center">
+                                <div class="md:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="bg-rose-50 border border-rose-200 rounded-lg p-6">
+                                        <h3 class="font-bold text-lg text-rose-800 mb-2">🐢 비관적/현실적 전망</h3>
+                                        <ul class="space-y-2 text-sm text-rose-700 list-disc list-inside">
+                                            <li><strong>산업 특성:</strong> 장치 산업의 긴 호흡과 고유 기술 중심 문화로 빠른 AI 도입이 어려움.</li>
+                                            <li><strong>실질적 장애물:</strong> 데이터 부재, 강력한 보안 정책 등 현실적 한계가 명확함.</li>
+                                            <li><strong>조직적 저항:</strong> '인력 감축' 우려로 인한 구성원의 방어기제와 저항 발생 가능성.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-sky-50 border border-sky-200 rounded-lg p-6">
+                                        <h3 class="font-bold text-lg text-sky-800 mb-2">🚀 낙관적/이상적 전망</h3>
+                                        <ul class="space-y-2 text-sm text-sky-700 list-disc list-inside">
+                                            <li><strong>변화 관리 주체:</strong> HRD가 기술 수용성을 높이고 성공적인 조직 변화를 이끄는 핵심 주체가 되어야 함.</li>
+                                            <li><strong>새로운 기회:</strong> 운영 업무 효율화를 통해 창의성, 리더십 등 더 가치 있는 영역에 집중 가능.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="md:col-span-2">
+                                    <div class="chart-container relative w-full max-w-xs mx-auto h-64 md:h-72">
+                                        <canvas id="scenarioChart"></canvas>
+                                    </div>
+                                    <p class="text-center text-sm text-slate-500 mt-2">미래 시나리오 전망 분포</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section id="roles" class="tab-pane hidden">
+                         <div class="p-2">
+                            <h2 class="text-2xl font-bold mb-2 text-slate-900">AI 시대, HRD의 역할과 나아갈 방향</h2>
+                            <p class="text-slate-600 mb-6">토론을 통해 AI 시대에 HRD가 생존하고 가치를 창출하기 위한 네 가지 핵심 역할이 도출되었습니다. 이는 단순한 기술 도입을 넘어, HRD의 근본적인 정체성을 재정립하고 전략적 방향을 설정하는 것을 목표로 합니다. 각 카드를 클릭하여 상세 내용을 확인해 보세요.</p>
+                            <div id="roles-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="participants" class="tab-pane hidden">
+                        <div class="p-2">
+                             <h2 class="text-2xl font-bold mb-2 text-slate-900">참석자별 핵심 의견</h2>
+                             <p class="text-slate-600 mb-6">총 6명의 참석자는 각자의 경험과 전문성을 바탕으로 AI와 HRD의 미래에 대한 다양한 의견을 제시했습니다. 아래 프로필을 클릭하여 각 참석자의 주장과 제언을 자세히 살펴보세요.</p>
+                             <div class="lg:flex lg:space-x-8">
+                                <div class="lg:w-1/2 grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6 lg:mb-0">
+                                </div>
+                                <div id="participant-details" class="lg:w-1/2 bg-slate-100 rounded-lg p-6 min-h-[200px] content-fade-in">
+                                </div>
+                             </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="text-center mt-8">
+            <p class="text-sm text-slate-500">&copy; 2025 POSCO Group Univ. All rights reserved.</p>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const hrdRolesData = [
+        {
+            icon: '🧭',
+            title: '전략적 변화 촉진자',
+            summary: '단순 기술 교육을 넘어, AI 시대에 맞는 일하는 방식의 변화를 선도하고 조직의 성공적인 적응을 지원합니다.',
+            details: [
+                'AI 시대에 맞는 일하는 방식의 변화 선도',
+                '조직의 성공적인 기술 적응 지원',
+                '구성원의 불안감 해소 및 긍정적 인식 확산',
+                '변화 관리 전문가 역할 수행'
+            ]
+        },
+        {
+            icon: '🎯',
+            title: '선택과 집중을 통한 점진적 접근',
+            summary: '전면적 도입보다 효과가 가장 큰 분야를 선정하여 성공 사례를 만들고, 점진적으로 확산시키는 전략을 추진합니다.',
+            details: [
+                'HRD 업무 중 AI 적용 최적 분야 선정 (예: 과정 기획, 데이터 분석)',
+                '작은 성공 사례(Success Case) 창출에 집중',
+                '성공 경험을 통한 AI 효용성 입증 및 점진적 확산'
+            ]
+        },
+        {
+            icon: '🧠',
+            title: '인간 고유 역량 개발 집중',
+            summary: 'AI가 대체하기 어려운 창의성, 비판적 사고, 리더십 등 인간 고유의 역량을 강화하는 교육에 집중합니다.',
+            details: [
+                '창의성, 비판적 사고, 소통, 협업, 리더십 등 교육 강화',
+                '기술과 인간의 시너지를 위한 통합적 인재 육성 전략 수립'
+            ]
+        },
+        {
+            icon: '🏗️',
+            title: '기반 환경 조성 지원',
+            summary: 'AI 기술 활용의 걸림돌이 되는 데이터, 보안, 시스템 등 제도적/물리적 기반이 조성되도록 적극 지원합니다.',
+            details: [
+                '데이터 정비, 보안 정책 개선에 대한 목소리',
+                '시스템 인프라 확충을 위한 유관 부서와 협력',
+                '제도적/물리적 기반 환경 조성에 기여'
+            ]
+        }
+    ];
+
+    const participantsData = [
+        {
+            name: '김두환',
+            title: '조장',
+            summary: "AI 기술에 대한 '호들갑'을 경계하며, 급진적 변화보다 꾸준한 지원을 통한 점진적 접근 방식의 유효성을 강조.",
+            details: {
+                '주요 역할': "'프론티어 펌', '시나리오 플래닝' 등 논의의 틀을 제시하며 토론을 이끌고, 참석자들의 의견을 종합하여 방향성을 정리함.",
+                '개인 의견': "AI 기술에 대한 과도한 기대나 '호들갑'을 경계. 급진적인 변화보다는, 구성원들의 역량이 무르익을 때까지 꾸준히 지원하며 천천히 나아가는 점진적 접근 방식이 더 유효할 것이라고 생각함."
+            }
+        },
+        {
+            name: '김광원',
+            title: '그룹장',
+            summary: "제조업 특성상 변화가 더딜 것으로 전망. 거대 담론보다 소규모 '성공 사례' 창출이 중요하다고 제언.",
+            details: {
+                '핵심 주장': "**(시나리오 4)** 포스코와 같은 제조업의 특성상 기술 발전과 조직 변화 모두 더딜 것으로 전망. (예: 스마트 팩토리의 더딘 확산)",
+                '근거': "AI가 인간 대 인간의 소통과 노하우 전수를 완전히 대체하기는 어려움. 특히 AI 도입이 '인력 감축'으로 인식되는 순간 강한 조직적 저항에 부딪힐 것.",
+                '제언': "거창한 담론보다, HRD 업무에 즉시 적용 가능한 AI 에이전트를 소규모로 도입하여 '성공 사례'를 만드는 것이 중요."
+            }
+        },
+        {
+            name: '문성필',
+            title: '그룹장',
+            summary: "HRD의 '존재 이유'에 대한 근본적 성찰을 촉구. 기술보다 조직의 미션, 가치, 문화에 집중할 것을 제안.",
+            details: {
+                '핵심 주장': "AI 시대에 HRD의 '존재 이유'에 대한 근본적인 성찰이 필요함. (예: MS 아시아에 HRD 인력이 0명인 사례)",
+                '근거': "기술의 변화 속에서 흔들리지 않는 것은 그 조직의 '미션'과 '가치', '문화'임.",
+                '제언': "기술 자체에 매몰되기보다, 포스코와 인재창조원의 미션을 명확히 하고, 이를 달성하기 위한 수단으로서 AI를 어떻게 활용할지 고민해야 함. 리더십, 조직 문화 등 상위 개념의 가치에 집중해야 함."
+            }
+        },
+        {
+            name: '장세상',
+            title: '리더',
+            summary: "기술 발전 속도를 조직이 따라가지 못할 것으로 예측. HRD의 '변화 관리' 역할과 인프라 기반 마련의 중요성을 강조.",
+            details: {
+                '핵심 주장': "**(시나리오 3)** 기술은 빠르게 발전하지만, 조직이 그 속도를 따라가지 못할 것.",
+                '근거': "변화에 대한 구성원들의 수용 속도는 더디기 마련임.",
+                '제언': "HRD는 기술에 대한 이해를 높이고, 우수 사례를 전파하며, 변화의 필요성을 설득하는 '변화 관리' 역할을 주도해야 함. 또한 AI 활용에 필요한 시스템, 인프라 등 물리적/제도적 기반 마련의 중요성을 강조."
+            }
+        },
+        {
+            name: '권오수',
+            title: '리더',
+            summary: "조직과 개인의 변화 속도 차이를 지적. 인재창조원이 선도적으로 AI를 학습하고 교육에 반영하여 변화를 유도해야 함을 주장.",
+            details: {
+                '핵심 주장': "**(시나리오 3)** 개인의 변화 인지 속도와 거대한 조직의 변화 속도 사이에는 시차가 존재.",
+                '근거': "포스코는 IT 기업과 달리 라이프 사이클이 긴 장치 산업이며, 고유 기술 기반의 학습 문화가 중요함.",
+                '제언': "AI 트렌드를 맹목적으로 따르기보다, 우리 조직의 특성에 맞춰 필요한 기술을 선별적으로 적용해야 함. 인재창조원이 먼저 AI 툴을 선도적으로 학습하고 교육에 반영하여 구성원들의 변화를 자연스럽게 유도해야 함."
+            }
+        },
+        {
+            name: '이희선',
+            title: '리더',
+            summary: "데이터 부재, 보안 제약 등 기술 활용의 현실적 기반이 취약함을 지적. HRD 역할 재정의와 운영 업무의 AI 대체를 제안.",
+            details: {
+                '핵심 주장': "**(시나리오 4)** 기술을 활용할 현실적인 기반이 매우 취약함.",
+                '근거': "1. **데이터 부재:** 당장 활용할 만한 정리된 데이터가 없음.\n2. **보안 제약:** 강력한 보안 정책으로 인해 할 수 있는 것이 매우 제한적임.\n3. **프로세스 미정의:** 현재의 업무 프로세스조차 제대로 정의되지 않은 상태에서 신기술을 활용하는 것은 어불성설.",
+                '제언': "HRD 인력의 역할은 운영 업무(줄여야 할 일)와 기획/개발 업무(늘려야 할 일)로 재정의되어야 함. 운영 업무를 대체할 수 있는 AI 시스템을 고민하고, 핵심 인력은 더 가치 있는 개발 업무에 집중해야 함."
+            }
+        }
+    ];
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panes = document.querySelectorAll('.tab-pane');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            tabs.forEach(item => item.classList.remove('tab-active'));
+            tab.classList.add('tab-active');
+
+            const target = tab.getAttribute('data-tab');
+            panes.forEach(pane => {
+                if (pane.id === target) {
+                    pane.classList.remove('hidden');
+                    pane.classList.add('content-fade-in');
+                } else {
+                    pane.classList.add('hidden');
+                }
+            });
+        });
+    });
+
+    const renderRoles = () => {
+        const container = document.getElementById('roles-container');
+        container.innerHTML = hrdRolesData.map(role => `
+            <div class="role-card bg-white border border-slate-200 rounded-lg p-6 cursor-pointer hover:shadow-md hover:border-blue-300 transition-all duration-300">
+                <div class="text-3xl mb-3">${role.icon}</div>
+                <h3 class="font-bold text-lg text-slate-900 mb-2">${role.title}</h3>
+                <p class="text-sm text-slate-600">${role.summary}</p>
+            </div>
+        `).join('');
+
+        document.querySelectorAll('.role-card').forEach((card, index) => {
+            card.addEventListener('click', () => {
+                showRoleDetails(hrdRolesData[index]);
+            });
+        });
+    };
+    
+    const showRoleDetails = (role) => {
+        let modal = document.querySelector('.modal-container');
+        if (modal) modal.remove();
+
+        const detailsHtml = role.details.map(detail => `<li class="flex items-start"><span class="text-blue-500 mr-2 mt-1">✓</span><span>${detail}</span></li>`).join('');
+
+        modal = document.createElement('div');
+        modal.className = 'modal-container fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 content-fade-in';
+        modal.innerHTML = `
+            <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg p-8 relative">
+                <button class="modal-close-btn absolute top-4 right-4 text-slate-400 hover:text-slate-800 transition-colors">&times;</button>
+                <div class="text-4xl mb-4">${role.icon}</div>
+                <h2 class="text-2xl font-bold text-slate-900 mb-4">${role.title}</h2>
+                <ul class="space-y-2 text-slate-700">${detailsHtml}</ul>
+            </div>
+        `;
+        document.body.appendChild(modal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal-container') || e.target.classList.contains('modal-close-btn') || e.target.parentElement.classList.contains('modal-close-btn')) {
+                modal.remove();
+            }
+        });
+    };
+
+    const renderParticipants = () => {
+        const gridContainer = document.querySelector('#participants .grid');
+        gridContainer.innerHTML = participantsData.map((p, index) => `
+            <div data-index="${index}" class="participant-card bg-white border-2 border-slate-200 rounded-lg p-4 text-center cursor-pointer transition-all duration-300 hover:bg-slate-50">
+                <div class="font-bold text-slate-900">${p.name}</div>
+                <div class="text-sm text-slate-500">${p.title}</div>
+            </div>
+        `).join('');
+        
+        const cards = document.querySelectorAll('.participant-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const index = card.getAttribute('data-index');
+                updateParticipantDetails(index);
+                cards.forEach(c => c.classList.remove('participant-card-active'));
+                card.classList.add('participant-card-active');
+            });
+        });
+
+        updateParticipantDetails(0);
+        cards[0].classList.add('participant-card-active');
+    };
+
+    const updateParticipantDetails = (index) => {
+        const detailsPanel = document.getElementById('participant-details');
+        const person = participantsData[index];
+        const detailsHtml = Object.entries(person.details).map(([key, value]) => `
+            <div class="mb-4">
+                <h4 class="font-semibold text-blue-600 text-sm mb-1">${key}</h4>
+                <p class="text-slate-700 text-sm whitespace-pre-line">${value}</p>
+            </div>
+        `).join('');
+
+        detailsPanel.innerHTML = `
+            <div class="content-fade-in">
+                <h3 class="text-xl font-bold text-slate-900 mb-4">${person.name} <span class="text-base font-medium text-slate-500">${person.title}</span></h3>
+                ${detailsHtml}
+            </div>
+        `;
+    };
+
+    const createChart = () => {
+        const ctx = document.getElementById('scenarioChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['시나리오 3: 빠른 기술발전, 더딘 조직변화 (4표)', '시나리오 4: 더딘 기술발전, 더딘 조직변화 (2표)'],
+                datasets: [{
+                    label: '참석자 의견',
+                    data: [4, 2],
+                    backgroundColor: [
+                        'rgba(59, 130, 246, 0.7)',
+                        'rgba(244, 63, 94, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(59, 130, 246, 1)',
+                        'rgba(244, 63, 94, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    tooltip: {
+                        padding: 10,
+                        titleFont: {
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        }
+                    }
+                },
+                cutout: '60%'
+            }
+        });
+    };
+
+    createChart();
+    renderRoles();
+    renderParticipants();
+});
+</script>
+
+</body>
+</html>
