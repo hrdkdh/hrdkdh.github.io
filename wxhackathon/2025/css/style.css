@@ -701,7 +701,7 @@ section h2::after {
     bottom: -32px;
     left: 50%;
     transform: translateX(-50%);
-    width: 200px;
+    width: 300px;
     height: 4px;
     background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
     border-radius: 2px;
