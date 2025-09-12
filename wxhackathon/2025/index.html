@@ -670,17 +670,17 @@
                     </h3>
                     <p class="text-gray-600 mb-6">지원하고자 하는 역할에 맞는 PPT 양식을 다운로드하여 작성 후 업로드해주세요.</p>
                     <div class="grid md:grid-cols-3 gap-4">
-                        <button onclick="downloadPlannerForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <button onclick="downloadForm('dreamer')" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             <i class="fas fa-lightbulb mr-2"></i>
                             <div class="text-sm">기획자</div>
                             <div class="text-xs opacity-90">지원서.pptx</div>
                         </button>
-                        <button onclick="downloadDeveloperForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <button onclick="downloadForm('developer')" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             <i class="fas fa-code mr-2"></i>
                             <div class="text-sm">개발자</div>
                             <div class="text-xs opacity-90">지원서.pptx</div>
                         </button>
-                        <button onclick="downloadDesignerForm()" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                        <button onclick="downloadForm('designer')" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                             <i class="fas fa-palette mr-2"></i>
                             <div class="text-sm">디자이너</div>
                             <div class="text-xs opacity-90">지원서.pptx</div>
@@ -1079,140 +1079,43 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        // Download functions for application forms
-        // 기획자 지원서 다운로드
-        function downloadPlannerForm() {
-            const content = `WX해커톤 2025 기획자 지원서 PPT 양식
-
-================================
-WX해커톤 2025 기획자 지원서 (PPT 양식)
-================================
-
-※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
-
-슬라이드 1: 표지
-- WX해커톤 2025 기획자 지원서
-- 성명: 
-- 소속: 
-- 연락처 & 이메일: 
-
-슬라이드 2: 기획 경험 및 역량
-- 주요 기획/PM 경력
-- 보유 기획 도구 (Figma, Miro, Notion 등)
-- 데이터 분석 경험
-- 프로젝트 관리 경험
-
-슬라이드 3: 문제 해결 능력
-- 복잡한 문제를 해결한 사례
-- 사용자 요구사항 분석 경험
-- 우선순위 설정 및 의사결정 사례
-
-슬라이드 4: 참가 동기 & 목표
-- 해커톤 참가 동기
-- 기획자로서 달성하고 싶은 목표
-- 팀 협업에서의 역할
-
-슬라이드 5: 아이디어 제안 (선택사항)
-- 관심 있는 문제 영역
-- 제안하고 싶은 솔루션 아이디어
-- 기대하는 팀 구성 (개발자/디자이너)
-
-※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
-            
-            downloadFile('WX해커톤2025_기획자지원서_PPT양식.txt', content, 'text/plain');
-            showNotification('기획자 지원서 PPT 양식이 다운로드되었습니다.', 'success');
-        }
-
-        // 개발자 지원서 다운로드
-        function downloadDeveloperForm() {
-            const content = `WX해커톤 2025 개발자 지원서 PPT 양식
-
-================================
-WX해커톤 2025 개발자 지원서 (PPT 양식)
-================================
-
-※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
-
-슬라이드 1: 표지
-- WX해커톤 2025 개발자 지원서
-- 성명: 
-- 소속: 
-- 연락처 & 이메일: 
-
-슬라이드 2: 기술 스택 & 경험
-- 주요 프로그래밍 언어
-- 프론트엔드/백엔드 경험
-- 데이터베이스 & 클라우드 경험
-- 개발 도구 (Git, IDE 등)
-
-슬라이드 3: 프로젝트 경험
-- 주요 개발 프로젝트 (3개 내외)
-- 각 프로젝트에서의 역할과 기술
-- 문제 해결 사례
-- 성과 및 학습 내용
-
-슬라이드 4: 참가 동기 & 목표
-- 해커톤 참가 동기
-- 개발자로서 달성하고 싶은 목표
-- 새로 도전하고 싶은 기술
-
-슬라이드 5: 아이디어 제안 (선택사항)
-- 구현하고 싶은 기술적 솔루션
-- 관심 있는 개발 영역
-- 기대하는 팀 구성 (기획자/디자이너)
-
-※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
-            
-            downloadFile('WX해커톤2025_개발자지원서_PPT양식.txt', content, 'text/plain');
-            showNotification('개발자 지원서 PPT 양식이 다운로드되었습니다.', 'success');
-        }
-
-        // 디자이너 지원서 다운로드
-        function downloadDesignerForm() {
-            const content = `WX해커톤 2025 디자이너 지원서 PPT 양식
-
-================================
-WX해커톤 2025 디자이너 지원서 (PPT 양식)
-================================
-
-※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
-
-슬라이드 1: 표지
-- WX해커톤 2025 디자이너 지원서
-- 성명: 
-- 소속: 
-- 연락처 & 이메일: 
-- 포트폴리오 URL: 
-
-슬라이드 2: 디자인 경험 & 툴
-- 주요 디자인 분야 (UI/UX, 그래픽, 프로덕트 등)
-- 보유 디자인 툴 (Figma, Adobe CC, Sketch 등)
-- 프로토타이핑 경험
-- 디자인 시스템 구축 경험
-
-슬라이드 3: 포트폴리오 하이라이트
-- 대표 디자인 프로젝트 (3개 내외)
-- 각 프로젝트의 목표와 해결 과정
-- 사용자 리서치 및 테스트 경험
-- 디자인 임팩트 및 성과
-
-슬라이드 4: 참가 동기 & 목표
-- 해커톤 참가 동기
-- 디자이너로서 달성하고 싶은 목표
-- 새로 시도하고 싶은 디자인 접근법
-
-슬라이드 5: 아이디어 제안 (선택사항)
-- 관심 있는 사용자 경험 영역
-- 제안하고 싶은 디자인 솔루션
-- 기대하는 팀 구성 (기획자/개발자)
-
-※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
-            
-            downloadFile('WX해커톤2025_디자이너지원서_PPT양식.txt', content, 'text/plain');
-            showNotification('디자이너 지원서 PPT 양식이 다운로드되었습니다.', 'success');
-        }
-        
-        // 역할별 가이드 함수 제거됨
+        // 지원서 다운로드
+        function downloadForm(category) {
+            let fileName = '';
+            let category_name = '';
+            if (category === 'dreamer') {
+                fileName = 'dreamer.pptx';
+                category_name = '기획자';
+            } else if (category === 'developer') {
+                fileName = 'developer.pptx';
+                category_name = '개발자';
+            } else if (category === 'designer') {
+                fileName = 'designer.pptx';
+                category_name = '디자이너';
+            } else {
+                alert('Invalid category');
+                return;
+            }
+            // 서버에서 Blob 데이터를 받아온 경우
+            fetch(fileName)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `[양식] 포스코그룹 25년 WX해커톤 참가신청서(${category_name}).pptx`; // 여기에서 원하는 파일명 지정
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+                gtag('event', 'form_download', {
+                    event_category: 'engagement',
+                    event_label: 'form_download_event',
+                    value: 1            // 정수 값, 필요 없으면 빼도 됨
+                    // send_to: 'G-XXXXXXX' // 속성 ID를 명시하고 싶다면 주석 해제
+                });
+            });
+        }   
     </script>
 </body>
 </html>
