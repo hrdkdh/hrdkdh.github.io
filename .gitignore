@@ -14,3 +14,5 @@ pgpt_multimodal_hds/workbook.pdf
 pgpt_multimodal/workbook.pdf
 *.pdf
 *.pptx
+.DS_Store
+.vscode/
