@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Background music functionality
     initBackgroundMusic();
+
 });
 
 // Mobile Menu Functionality
@@ -695,4 +696,120 @@ function initBackgroundMusic() {
     musicIcon.className = 'fas fa-volume-mute text-xl';
     musicToggle.title = '배경음악 재생';
     musicToggle.style.animation = 'pulse 2s infinite';
+}
+
+//개인정보 수집/이용 및 해커톤 규정 관련 팝업창
+function openPolicyPopup() {
+    //HTML 소스를 아래에 직접 작성해 레이어 팝업으로 띄움
+    const content = `
+        <style>
+            #policyPopup h1 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-weight:bold;
+                font-size:14pt;
+            }
+            #policyPopup h2 {
+                margin-top: 15px;
+                margin-bottom: 8px;
+                font-weight:bold;
+                font-size:12pt;
+            }
+            #policyPopup p {
+                margin-bottom: 10px;
+                line-height: 1.6;
+            }
+        </style>
+        <h1>WX해커톤 2025 'Agents Assemble!' 참가 규정</h1>
+        <p>본 규정은 WX해커톤 2025 'Agents Assemble!' 참가자(이하 '참가자')에게 적용됩니다. 참가자는 본 대회 참가 신청 시 아래 규정에 동의한 것으로 간주합니다.</p>
+
+        <h2>제1조 (참가 자격 및 팀 구성)</h2>
+        <p>참가자는 기획자, 개발자, 디자이너 역할로 구분된 4인 이내의 팀으로 구성됩니다.<br>
+        참가 신청서에 기재된 정보가 허위일 경우, 참가가 취소될 수 있습니다.<br>
+        신청 및 선발 후 본선에 참가하지 않을 경우 팀 전체가 실격 처리됩니다.</p>
+
+        <h2>제2조 (작품 출품 및 소유권)</h2>
+        <p>참가자가 해커톤 기간 동안 개발한 모든 결과물(이하 '출품작')의 지식재산권(저작권)은 원칙적으로 참가자에게 있습니다.<br>
+        단, 포스코인재창조원에서 결과물을 홍보, 전시, 교육 등 비영리적 목적으로 활용할 수 있습니다.<br>
+        타인의 지식재산권을 침해한 것으로 밝혀질 경우, 심사에서 제외되며 수상이 취소될 수 있습니다. 이로 인해 발생하는 모든 민·형사상 책임은 참가자에게 있습니다.</p>
+
+        <h2>제3조 (행사 진행 및 규정 준수)</h2>
+        <p>참가자는 해커톤 기간 동안 주최측이 제공하는 규칙과 지시사항을 따라야 합니다.<br>
+        해커톤의 공정한 진행을 위해 부정행위가 발견될 경우 참가 자격이 박탈될 수 있습니다.</p>
+
+        <h1>개인정보 수집/이용 동의서</h1>
+        <p>WX해커톤 2025 'Agents Assemble!' 참가 신청을 위해 아래와 같이 개인정보를 수집 및 이용합니다. 제공된 모든 정보는 '개인정보 보호법' 등 관련 법규에 의거하여 안전하게 관리됩니다.</p>
+
+        <h2>1. 개인정보 수집 및 이용 목적</h2>
+        <p>해커톤 참가자 등록 및 본인 확인<br>
+        대회 운영 및 수상자 선정, 상금 지급 등 진행 업무<br>
+        수상작 홍보 및 해커톤 사후 관리<br>
+        참가 관련 정보 안내 및 문의 응대</p>
+
+        <h2>2. 수집하는 개인정보의 항목</h2>
+        <p>필수 항목: 성명, 회사명, 부서명, 휴대폰 번호, 이메일 주소<br>
+        선택 항목: 팀원 정보, 참가 신청서에 포함된 포트폴리오 등</p>
+
+        <h2>3. 개인정보의 보유 및 이용 기간</h2>
+        <p>수집된 개인정보는 해커톤 종료 후 1년까지 보관하며, 이후 지체 없이 파기합니다.<br>
+        단, 수상자의 경우 수상작의 홍보 및 기록 보존을 위해 관련 정보를 해커톤 종료 후 5년까지 보관할 수 있습니다.</p>
+
+        <h2>4. 동의를 거부할 권리 및 동의 거부 시 불이익</h2>
+        <p>참가자는 개인정보 수집 및 이용에 대한 동의를 거부할 권리가 있습니다.<br>
+        필수 항목 수집에 동의하지 않을 경우 해커톤 참가 신청이 불가하며, 선택 항목에 동의하지 않아도 참가에는 불이익이 없습니다.</p>
+    `;
+    var popupWidth = 800;
+    var popupHeight = 700;
+    var left = (window.innerWidth / 2) - (popupWidth / 2);
+    var top = (window.innerHeight / 2) - (popupHeight / 2);
+    if (window.innerWidth < popupWidth + 40) {
+        //화면이 작으면 꽉 채움
+        popupWidth = window.innerWidth - 40;
+        left = 20;
+    }
+    if (window.innerHeight < popupHeight + 40) {
+        //화면이 작으면 꽉 채움
+        popupHeight = window.innerHeight - 40;
+        top = 20;
+    }
+    
+    //기존 팝업이 있으면 제거
+    const existingPopup = document.querySelector('#policyPopup');
+    if (existingPopup) {
+        existingPopup.remove();
+    }
+
+    //레이어로 된 html element 생성
+    const popup = document.createElement('div');
+    popup.id = 'policyPopup';
+    popup.style.position = 'fixed';
+    popup.style.left = `${left}px`;
+    popup.style.top = `${top}px`;
+    popup.style.width = `${popupWidth}px`;
+    popup.style.height = `${popupHeight}px`;
+    popup.style.backgroundColor = '#fff';
+    popup.style.border = '2px solid #000';
+    popup.style.borderRadius = '10px';
+    popup.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.1)';
+    popup.style.zIndex = '10000';
+    popup.style.padding = '20px';
+    popup.style.overflowY = 'auto';
+
+    //팝업 내용 추가
+    popup.innerHTML = `
+        <div style="text-align: right;">
+            <button id="closePopup" style="background: none; border: none; font-size: 20px; cursor: pointer;">&times;</button>
+        </div>
+        <div style="padding: 10px;">
+            ${content}
+        </div>
+    `;
+
+    //팝업 닫기 버튼 이벤트
+    popup.querySelector('#closePopup').addEventListener('click', () => {
+        document.querySelector('#policyPopup').remove();
+    });
+
+    //팝업을 body에 추가
+    document.body.appendChild(popup);
 }
