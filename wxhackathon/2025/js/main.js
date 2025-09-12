@@ -314,25 +314,48 @@ function initFormSubmission() {
             submitButton.innerHTML = '<div class="loading-spinner"></div> 제출 중...';
             submitButton.disabled = true;
             
-            // Simulate form submission
-            setTimeout(() => {
+            axios.post("https://wxsurvey.kr/api/wxhackathon_apply", {
+                name: document.querySelector('#name').value,
+                role: document.querySelector('#role').value,
+                company: document.querySelector('#company').value,
+                department_name: document.querySelector('#department').value,
+                email: document.querySelector('#email').value,
+                cellphone: document.querySelector('#phone').value,
+                agent_name: document.querySelector('#agent-name').value,
+                tech_summary: document.querySelector('#tech-summary').value
+            }).then(function (response) {
+                if (response.data.result !== 'success') {
+                    // Reset button
+                    submitButton.innerHTML = originalText;
+                    submitButton.disabled = false;
+                    // Show error message
+                    showNotification('참가 신청 제출에 실패했습니다. 다시 시도해주세요.', 'error');
+                    return;
+                }
                 // Reset button
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
-                
+
                 // Show success message
-                showNotification('참가 신청이 성공적으로 제출되었습니다!', 'success');
-                
+                showNotification('참가 신청서가 성공적으로 제출되었습니다!', 'success');
+                                
                 // Reset form
-                this.reset();
+                document.querySelector('#application-form').reset();
                 toggleRoleFields(''); // Hide all conditional fields
-                
+                                
                 // Clear file list
                 const fileList = document.querySelector('.file-list');
                 if (fileList) {
                     fileList.innerHTML = '';
                 }
-            }, 2000);
+            }).catch(function (error) {
+                console.log(error);
+                // Reset button
+                submitButton.innerHTML = originalText;
+                submitButton.disabled = false;
+                // Show error message
+                showNotification('참가 신청서 제출 중 오류가 발생했습니다. 다시 시도해주세요.', 'error');
+            });
         });
     }
 }
