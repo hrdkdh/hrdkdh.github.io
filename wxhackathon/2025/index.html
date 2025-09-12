@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WX해커톤 2025 - Agents Assemble!</title>
+    <meta name="description" content="포스코그룹 WX해커톤 2025 공식 웹사이트. Agents Assemble! 슬로건으로 진행되는 해커톤 참가 신청">
+    
+    <!-- CSS 라이브러리 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- 커스텀 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="font-inter">
+    <!-- Dynamic Modern Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Compact Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 via-purple-600 to-blue-600 rounded-xl flex items-center justify-center shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105">
+                                <span class="text-white font-black text-lg">W</span>
+                            </div>
+                            <div>
+                                <h1 class="text-lg font-black bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">WX해커톤 2025</h1>
+                                <p class="text-xs font-semibold text-gray-600 -mt-1">⚡ Agents Assemble</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compact Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#about" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-semibold text-sm hover:scale-105">소개</a>
+                    <a href="#schedule" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-semibold text-sm hover:scale-105">일정</a>
+                    <a href="#criteria" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-semibold text-sm hover:scale-105">선발기준</a>
+                    <a href="#benefits" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-semibold text-sm hover:scale-105">혜택</a>
+                    <a href="#apply" class="nav-link px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 font-bold text-sm shadow-md hover:shadow-lg hover:scale-105">🚀 신청하기</a>
+                    <a href="#faq" class="nav-link px-3 py-2 rounded-lg text-gray-700 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-semibold text-sm hover:scale-105">FAQ</a>
+                </div>
+                
+                <!-- Compact Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-lg hover:bg-blue-100 transition-all duration-300">
+                        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Enhanced Mobile Menu -->
+        <div class="mobile-menu hidden md:hidden">
+            <div class="px-4 pt-2 pb-4 space-y-3 mobile-menu-enhanced">
+                <a href="#about" class="block px-6 py-4 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-bold text-lg border-b border-gray-100">📖 소개</a>
+                <a href="#schedule" class="block px-6 py-4 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-bold text-lg border-b border-gray-100">📅 일정</a>
+                <a href="#criteria" class="block px-6 py-4 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-bold text-lg border-b border-gray-100">🎯 선발기준</a>
+                <a href="#benefits" class="block px-6 py-4 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-bold text-lg border-b border-gray-100">🎁 혜택</a>
+                <a href="#apply" class="block px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-bold text-lg text-center shadow-lg border-b border-gray-100">🚀 신청하기</a>
+                <a href="#faq" class="block px-6 py-4 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50 transition-all duration-300 font-bold text-lg">❓ FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Revolutionary & Engaging Design -->
+    <section class="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Optimized Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900"></div>
+        
+        <!-- Simple Grid Pattern -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.3) 1px, transparent 0); background-size: 40px 40px;"></div>
+        </div>
+        
+
+        
+        <!-- Subtle Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent"></div>
+        
+        <!-- Revolutionary Main Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+            <!-- Eye-catching Badge -->
+            <div class="inline-flex items-center px-8 py-3 rounded-full bg-gradient-to-r from-blue-600/90 to-purple-600/90 backdrop-blur-md border border-white/20 mb-10 shadow-2xl transform hover:scale-105 transition-all duration-300">
+                <span class="text-white font-bold text-lg tracking-wide">2025 포스코그룹 해커톤</span>
+            </div>
+            
+            <!-- Dynamic Title with Better Hierarchy -->
+            <div class="mb-16">
+                <h1 class="text-7xl md:text-9xl font-black mb-8 leading-none tracking-tight">
+                    <span class="block bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-2xl mb-4 animate-pulse">
+                        WX해커톤
+                    </span>
+                    <span class="block text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent drop-shadow-lg">
+                        2025
+                    </span>
+                </h1>
+                
+                <!-- Revolutionary Slogan -->
+                <div class="mb-10">
+                    <h2 class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent mb-8 animate-bounce hero-title-short relative inline-block" style="animation-duration: 2s; line-height: 2;">⚡ Agents Assemble!</h2>
+                    <p class="text-xl md:text-2xl text-white/90 mt-6 font-medium tracking-wide">AI 에이전트와 함께 경계를 넘어, 미래의 무대를 열다</p>
+                </div>
+            </div>
+            
+            <!-- Revolutionary Info Cards -->
+            <div class="grid md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+                <!-- Participants Card -->
+                <div class="group bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl mx-auto mb-6 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-users text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">참가 대상</h3>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-4 py-2 bg-blue-500/80 text-white text-sm rounded-full font-semibold shadow-lg">🎯 기획자</span>
+                        <span class="px-4 py-2 bg-green-500/80 text-white text-sm rounded-full font-semibold shadow-lg">💻 개발자</span>
+                        <span class="px-4 py-2 bg-purple-500/80 text-white text-sm rounded-full font-semibold shadow-lg">🎨 디자이너</span>
+                    </div>
+                </div>
+                
+                <!-- Duration Card -->
+                <div class="group bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-400 rounded-2xl mx-auto mb-6 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-clock text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">개발 기간</h3>
+                    <p class="text-4xl font-black text-red-400 mb-2">24시간</p>
+                    <p class="text-white/80 text-lg font-medium">⚡ 논스톱 개발 경진대회</p>
+                </div>
+                
+                <!-- Prize Card -->
+                <div class="group bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:transform hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-400 rounded-2xl mx-auto mb-6 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
+                        <i class="fas fa-trophy text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">우승 상품</h3>
+                    <div class="space-y-2">
+                        <p class="text-lg font-bold text-yellow-400">🥇 MacBook Pro 16"</p>
+                        <p class="text-lg font-bold text-gray-300">🥈 MacBook Air 13"</p>
+                        <p class="text-lg font-bold text-orange-300">🥉 Mac Mini</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mission Statement -->
+            <div class="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl rounded-3xl p-8 max-w-5xl mx-auto mb-16 border border-white/20 shadow-2xl">
+                <p class="text-2xl md:text-3xl font-bold text-white leading-relaxed">🌟 <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">아이디어</span>와 <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">기술</span>이 모여, <span class="bg-gradient-to-r from-yellow-400 to-red-400 bg-clip-text text-transparent">새로운 일하는 방식을 만드는</span> WX해커톤</p>
+            </div>
+            
+            <!-- Revolutionary CTA Section -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+                <a href="#apply" class="group relative px-12 py-5 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 text-white rounded-2xl font-bold text-xl shadow-2xl hover:shadow-blue-500/50 transition-all duration-500 hover:scale-110 transform hover:-translate-y-2 border border-white/20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl blur opacity-70 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <span class="relative flex items-center">🚀 지금 바로 신청하기</span>
+                </a>
+                
+                <a href="#about" class="group px-12 py-5 bg-white/10 backdrop-blur-xl hover:bg-white/20 text-white hover:text-white rounded-2xl font-bold text-xl transition-all duration-500 hover:scale-110 transform hover:-translate-y-2 shadow-xl hover:shadow-white/20 border border-white/20">
+                    💡 더 자세히 알아보기
+                </a>
+            </div>
+            
+            <!-- Enhanced Schedule Timeline -->
+            <div class="bg-gradient-to-r from-black/40 via-black/60 to-black/40 backdrop-blur-xl rounded-3xl p-12 max-w-6xl mx-auto border border-white/20 shadow-2xl">
+                <h3 class="text-3xl font-bold text-white text-center mb-12">📅 주요 일정</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 신청 기간 카드 -->
+                    <div class="group bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-blue-500/30 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- 아이콘 -->
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-blue-500/50 transition-all duration-300">
+                            <i class="fas fa-calendar-check text-white text-xl"></i>
+                        </div>
+                        
+                        <!-- 제목 -->
+                        <h4 class="text-2xl font-bold text-blue-300 mb-4 text-center">신청 기간</h4>
+                        
+                        <!-- 날짜 -->
+                        <div class="bg-blue-500/20 rounded-xl p-4 mb-4">
+                            <p class="text-xl font-bold text-white text-center">09.17 - 09.24</p>
+                        </div>
+                        
+                        <!-- 설명 -->
+                        <p class="text-white/80 text-center font-medium">지금이 바로 그 때!</p>
+                        
+                        <!-- 상태 표시 -->
+                        <div class="mt-4 text-center">
+                            <span class="inline-block px-4 py-2 bg-blue-500/30 text-blue-200 rounded-full text-sm font-semibold">진행 중</span>
+                        </div>
+                    </div>
+
+                    <!-- 팀 밋업 카드 -->
+                    <div class="group bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-green-500/30 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- 아이콘 -->
+                        <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-400 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-green-500/50 transition-all duration-300">
+                            <i class="fas fa-handshake text-white text-xl"></i>
+                        </div>
+                        
+                        <!-- 제목 -->
+                        <h4 class="text-2xl font-bold text-green-300 mb-4 text-center">팀 밋업</h4>
+                        
+                        <!-- 날짜 -->
+                        <div class="bg-green-500/20 rounded-xl p-4 mb-4">
+                            <p class="text-xl font-bold text-white text-center">10.14</p>
+                        </div>
+                        
+                        <!-- 설명 -->
+                        <p class="text-white/80 text-center font-medium">운명의 만남</p>
+                        
+                        <!-- 상태 표시 -->
+                        <div class="mt-4 text-center">
+                            <span class="inline-block px-4 py-2 bg-green-500/30 text-green-200 rounded-full text-sm font-semibold">예정</span>
+                        </div>
+                    </div>
+
+                    <!-- 해커톤 본선 카드 -->
+                    <div class="group bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-xl hover:bg-white/15 hover:shadow-purple-500/30 transition-all duration-500 hover:transform hover:scale-105">
+                        <!-- 아이콘 -->
+                        <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-400 rounded-2xl mx-auto mb-6 flex items-center justify-center shadow-lg group-hover:shadow-purple-500/50 transition-all duration-300">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        
+                        <!-- 제목 -->
+                        <h4 class="text-2xl font-bold text-purple-300 mb-4 text-center">해커톤 본선</h4>
+                        
+                        <!-- 날짜 -->
+                        <div class="bg-purple-500/20 rounded-xl p-4 mb-4">
+                            <p class="text-xl font-bold text-white text-center">11.06 - 11.07</p>
+                        </div>
+                        
+                        <!-- 설명 -->
+                        <p class="text-white/80 text-center font-medium">혁신의 순간</p>
+                        
+                        <!-- 상태 표시 -->
+                        <div class="mt-4 text-center">
+                            <span class="inline-block px-4 py-2 bg-purple-500/30 text-purple-200 rounded-full text-sm font-semibold">예정</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">🎆 행사 소개</h2>
+                <p class="text-2xl md:text-3xl font-bold text-gray-700 max-w-7xl mx-auto leading-loose mb-12">
+                    WX 해커톤은 <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">다양한 아이디어</span>와 <span class="bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">최신 기술</span>이 만나
+                    <br>
+                    새로운 가능성을 현실로 만드는 무대입니다.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- 참가 혜택 -->
+                <div class="modern-card p-8 text-center">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">참가 굿즈</h3>
+                    <p class="text-base text-gray-600 mb-4">2025 WX해커톤의<br>특별한 굿즈!</p>
+                    <div class="text-base text-blue-600 font-medium bg-gradient-to-r from-blue-100 to-purple-100 px-4 py-2 rounded-full">
+                        <i class="fas fa-surprise mr-1"></i>
+                        현장에서 확인하세요
+                    </div>
+                </div>
+                
+                <!-- 수상 특전 -->
+                <div class="modern-card p-8 text-center">
+                    <div class="text-green-600 text-3xl mb-4">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">수상 특전</h3>
+                    <ul class="text-gray-600 space-y-3 text-base">
+                        <li>• 맥북 프로 M4 (1등)</li>
+                        <li>• 맥북 에어 (2등)</li>
+                        <li>• 맥 미니 (3등)</li>
+                    </ul>
+                </div>
+                
+                <!-- 지원 분야 -->
+                <div class="modern-card p-8 text-center">
+                    <div class="text-purple-600 text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">지원 분야</h3>
+                    <div class="space-y-3 text-base text-gray-600">
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-orange-500 mr-2"></i>
+                            <span>기획자</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-code text-blue-500 mr-2"></i>
+                            <span>개발자</span>
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <i class="fas fa-palette text-pink-500 mr-2"></i>
+                            <span>디자이너</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 개발 환경 -->
+                <div class="modern-card p-8 text-center">
+                    <div class="text-orange-600 text-3xl mb-4">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-900">개발 환경</h3>
+                    <ul class="text-gray-600 space-y-3 text-base">
+                        <li>• 노트북·모니터 대여</li>
+                        <li>• AI 도구 및 API 크레딧</li>
+                        <li>• 24시간 멘토링 지원</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">📅 진행 일정</h2>
+                <p class="text-2xl font-bold text-gray-700 mb-12">단계별 진행 일정을 확인하세요</p>
+            </div>
+            
+            <!-- Streamlined Timeline - Single Row -->
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Horizontal Timeline Line -->
+                <div class="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-green-500 via-purple-500 to-orange-500 rounded-full timeline-line-desktop"></div>
+                
+                <!-- Timeline Items in Single Row -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+                    <!-- Phase 1 -->
+                    <div class="text-center">
+                        <div class="relative mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full mx-auto flex items-center justify-center shadow-xl border-4 border-white">
+                                <span class="text-white font-bold text-xl">1</span>
+                            </div>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 h-60 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-900 mb-3">개인 지원서 접수</h3>
+                                <p class="text-base text-gray-700 mb-3">기획자/개발자/디자이너<br>개인 지원</p>
+                                <p class="text-base font-semibold text-blue-600">9월 17일~24일</p>
+                            </div>
+                            <div class="mt-3">
+                                <span class="inline-block px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">1단계: 모집</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 2 -->
+                    <div class="text-center">
+                        <div class="relative mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto flex items-center justify-center shadow-xl border-4 border-white">
+                                <span class="text-white font-bold text-xl">2</span>
+                            </div>
+                        </div>
+                        <div class="bg-green-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 h-60 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-green-900 mb-3">서류 심사 및 선발</h3>
+                                <p class="text-base text-gray-700 mb-3">지원서 검토 및<br>참가자 선발</p>
+                                <p class="text-base font-semibold text-green-600 mb-1">9월 25일~30일</p>
+                                <p class="text-base font-semibold text-green-600">10월 2일 합격자 발표</p>
+                            </div>
+                            <div class="mt-3">
+                                <span class="inline-block px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-medium">2단계: 선발</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 3 -->
+                    <div class="text-center">
+                        <div class="relative mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full mx-auto flex items-center justify-center shadow-xl border-4 border-white">
+                                <span class="text-white font-bold text-xl">3</span>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 h-60 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-purple-900 mb-3">팀 밋업 및 사전 교육</h3>
+                                <p class="text-base text-gray-700 mb-3">온오프라인<br>사전 학습 기간</p>
+                                <p class="text-base font-semibold text-purple-600 mb-1">10월 15일~11월 5일</p>
+                                <p class="text-base font-semibold text-purple-600">10월 14일 팀밋업</p>
+                            </div>
+                            <div class="mt-3">
+                                <span class="inline-block px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">3단계: 준비</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Phase 4 -->
+                    <div class="text-center">
+                        <div class="relative mb-8">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full mx-auto flex items-center justify-center shadow-xl border-4 border-white">
+                                <span class="text-white font-bold text-xl">4</span>
+                            </div>
+                        </div>
+                        <div class="bg-orange-50 p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:transform hover:scale-105 h-60 flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold text-orange-900 mb-3">해커톤 본선</h3>
+                                <p class="text-base text-gray-700 mb-1">24시간 개발 진행</p>
+                                <p class="text-base text-gray-700 mb-2">발표회 및 시상</p>
+                                <p class="text-base font-semibold text-orange-600">11월 6일~7일</p>
+                            </div>
+                            <div class="mt-3">
+                                <span class="inline-block px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">4단계: 본선</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selection Criteria Section -->
+    <section id="criteria" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">🎯 선발 기준</h2>
+                <p class="text-2xl font-bold text-gray-700 mb-12">단계별 선발 과정과 평가 기준을 안내합니다</p>
+            </div>
+            
+            <!-- 해커톤 구성 -->
+            <div class="flex justify-center mb-10">
+                <div class="bg-white/80 backdrop-blur-sm border border-gray-200 rounded-2xl p-6 shadow-lg">
+                    <div class="flex items-center justify-center space-x-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">15개 팀</div>
+                            <div class="text-sm text-gray-500 mt-1">Teams</div>
+                        </div>
+                        <div class="w-px h-12 bg-gray-300"></div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">60명 선발</div>
+                            <div class="text-sm text-gray-500 mt-1">Selected</div>
+                        </div>
+                        <div class="w-px h-12 bg-gray-300"></div>
+                        <div class="text-center">
+                            <div class="text-lg font-semibold text-gray-700">기획자 1 + 개발자 2 + 디자이너 1</div>
+                            <div class="text-sm text-gray-500 mt-1">Team Structure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 기획자 선발 -->
+                <div class="group relative bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">기획자 선발</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/70 backdrop-blur-sm p-5 rounded-xl">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">1차: 아이디어 심사</h4>
+                            <p class="text-base text-gray-600">• 서류 심사로 <span class="font-medium text-blue-600">30개 아이디어</span> 선발<br>• 창의성 · 실현가능성 · 사회적 가치 평가</p>
+                        </div>
+                        
+                        <div class="bg-white/70 backdrop-blur-sm p-5 rounded-xl">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">2차: 종합 평가</h4>
+                            <p class="text-base text-gray-600">• 직원 투표 50% + 전문 심사위원 50%<br>• 최종 <span class="font-medium text-indigo-600">15개 아이디어</span> 선정</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex items-center justify-center py-3 px-5 bg-blue-100 rounded-lg">
+                        <i class="fas fa-clock text-blue-600 mr-2 text-sm"></i>
+                        <span class="text-sm font-medium text-blue-800">09.25(목) ~ 10.02(목)</span>
+                    </div>
+                </div>
+                
+                <!-- 개발자/디자이너 선발 -->
+                <div class="group relative bg-gradient-to-br from-emerald-50 to-green-50 p-8 rounded-2xl border border-emerald-100 hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-users text-white text-lg"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">개발자 · 디자이너 선발</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-white/70 backdrop-blur-sm p-5 rounded-xl">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">포트폴리오 기반 심사</h4>
+                            <p class="text-base text-gray-600">• 개발자: 기술 역량 · 프로젝트 경험<br>• 디자이너: 포트폴리오 · UI/UX 역량</p>
+                        </div>
+                        
+                        <div class="bg-white/70 backdrop-blur-sm p-5 rounded-xl">
+                            <h4 class="text-lg font-semibold text-gray-900 mb-3">팀 구성 배치</h4>
+                            <p class="text-base text-gray-600">• 각 팀당 <span class="font-medium text-emerald-600">개발자 2명</span> 배치<br>• 각 팀당 <span class="font-medium text-green-600">디자이너 1명</span> 배치</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex items-center justify-center py-3 px-5 bg-emerald-100 rounded-lg">
+                        <i class="fas fa-calendar-alt text-emerald-600 mr-2 text-sm"></i>
+                        <span class="text-sm font-medium text-emerald-800">09.25(목) ~ 10.02(목)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">🎁 참가 혜택 & 수상 혜택</h2>
+                <p class="text-2xl font-bold text-gray-700 mb-12">WX해커톤 2025 참가자 및 수상팀을 위한 다양한 혜택</p>
+            </div>
+            
+            <!-- 참가 혜택 -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-center mb-8 text-gray-900">모든 참가자 혜택</h3>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- 스페셜 굿즈 박스 -->
+                    <div class="benefit-card p-6 text-center">
+                        <div class="text-gradient text-3xl mb-4">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">🎁 스페셜 굿즈 박스</h4>
+                        <p class="text-gray-600 mb-4">WX해커톤만의 특별한 기념품들을 준비했습니다</p>
+                        <div class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 px-4 py-3 rounded-full">
+                            <span class="text-sm font-medium text-gray-800">
+                                <i class="fas fa-surprise mr-2"></i>
+                                당일 현장에서 서프라이즈 공개!
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- 깜짝 선물 -->
+                    <div class="benefit-card p-6 text-center">
+                        <div class="text-gradient text-3xl mb-4">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">✨ 깜짝 선물</h4>
+                        <p class="text-gray-600 mb-4">프로 개발자를 위한 프리미엄 워크스테이션 세트</p>
+                        <div class="bg-gradient-to-r from-yellow-100 via-orange-100 to-red-100 px-4 py-3 rounded-full">
+                            <span class="text-sm font-bold text-gray-800">
+                                <i class="fas fa-surprise mr-2"></i>
+                                개발의 품격을 높여줄 특별한 선물! 🎯
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 수상 혜택 -->
+            <div>
+                <h3 class="text-2xl font-semibold text-center mb-8 text-gray-900">우승팀 특별상품</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- 1등 -->
+                    <div class="prize-card first-place p-8 rounded-3xl text-center group">
+                        <div class="absolute top-6 right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            1등 상품
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://page.gensparksite.com/v1/base64_upload/1b8acae620e06bf1be90df10623b517c" 
+                                 alt="MacBook Pro 16인치 M4" 
+                                 class="w-full h-40 object-cover rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-4xl mb-3">🥇</div>
+                            <h5 class="text-xl font-bold text-gray-900">MacBook Pro 16"</h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">M4 Pro 칩셋과 16인치<br>Liquid Retina XDR 디스플레이로<br>최고의 성능을 제공</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4">
+                                <div class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-800 px-3 py-1 rounded-full font-semibold">
+                                    M4 Pro
+                                </div>
+                                <div class="text-xs bg-gradient-to-r from-yellow-100 to-orange-100 text-yellow-800 px-3 py-1 rounded-full font-semibold">
+                                    16인치
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2등 -->
+                    <div class="prize-card second-place p-8 rounded-3xl text-center group">
+                        <div class="absolute top-6 right-6 bg-gradient-to-r from-gray-400 to-gray-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            2등 상품
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://page.gensparksite.com/v1/base64_upload/e115d828a9160eb5f0eb278cee4bbaa4" 
+                                 alt="MacBook Air 13인치 M4" 
+                                 class="w-full h-40 object-contain rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-4xl mb-3">🥈</div>
+                            <h5 class="text-xl font-bold text-gray-900">MacBook Air 13"</h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">M4 칩과 올데이 배터리로<br>어디서나 완벽한<br>휴대성과 성능을 경험</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4">
+                                <div class="text-xs bg-gradient-to-r from-gray-100 to-slate-100 text-gray-800 px-3 py-1 rounded-full font-semibold">
+                                    M4
+                                </div>
+                                <div class="text-xs bg-gradient-to-r from-gray-100 to-slate-100 text-gray-800 px-3 py-1 rounded-full font-semibold">
+                                    13인치
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 3등 -->
+                    <div class="prize-card third-place p-8 rounded-3xl text-center group">
+                        <div class="absolute top-6 right-6 bg-gradient-to-r from-pink-400 to-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                            3등 상품
+                        </div>
+                        <div class="mb-6">
+                            <img src="https://page.gensparksite.com/v1/base64_upload/835e84c5d989c7a6613f40af919e4b83" 
+                                 alt="Mac Mini" 
+                                 class="w-full h-40 object-cover rounded-2xl shadow-2xl group-hover:shadow-3xl transition-all duration-500">
+                        </div>
+                        <div class="space-y-3">
+                            <div class="text-4xl mb-3">🥉</div>
+                            <h5 class="text-xl font-bold text-gray-900">Mac Mini</h5>
+                            <p class="text-sm text-gray-600 leading-relaxed">놀라울 정도로 작은 크기에<br>M4 칩의 강력한 성능을 담은<br>데스크톱</p>
+                            <div class="flex items-center justify-center space-x-2 mt-4">
+                                <div class="text-xs bg-gradient-to-r from-pink-100 to-rose-100 text-pink-800 px-3 py-1 rounded-full font-semibold">
+                                    M4
+                                </div>
+                                <div class="text-xs bg-gradient-to-r from-pink-100 to-rose-100 text-pink-800 px-3 py-1 rounded-full font-semibold">
+                                    Ultra Compact
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <p class="text-sm text-gray-500">
+                        <i class="fas fa-info-circle mr-1"></i>
+                        모든 상품은 최신 모델로 제공되며, 상세 스펙은 시상 시 안내됩니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Section -->
+    <section id="apply" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">🚀 참가 신청</h2>
+                <p class="text-2xl font-bold text-gray-700 mb-8">WX해커톤 2025에 참가하시려면 아래 양식을 작성해주세요</p>
+                <div class="mt-4 p-4 bg-blue-100 rounded-lg inline-block">
+                    <p class="text-blue-800 font-semibold">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        신청기간: 2025.09.15(월) ~ 09.24(수)
+                    </p>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <!-- Download Section -->
+                <div class="mb-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg border border-blue-200">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">
+                        <i class="fas fa-download text-blue-600 mr-2"></i>
+                        역할별 신청서 다운로드
+                    </h3>
+                    <p class="text-gray-600 mb-6">지원하고자 하는 역할에 맞는 PPT 양식을 다운로드하여 작성 후 업로드해주세요.</p>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <button onclick="downloadPlannerForm()" class="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-lightbulb mr-2"></i>
+                            <div class="text-sm">기획자</div>
+                            <div class="text-xs opacity-90">지원서.pptx</div>
+                        </button>
+                        <button onclick="downloadDeveloperForm()" class="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-code mr-2"></i>
+                            <div class="text-sm">개발자</div>
+                            <div class="text-xs opacity-90">지원서.pptx</div>
+                        </button>
+                        <button onclick="downloadDesignerForm()" class="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-6 py-4 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            <i class="fas fa-palette mr-2"></i>
+                            <div class="text-sm">디자이너</div>
+                            <div class="text-xs opacity-90">지원서.pptx</div>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Upload Form -->
+                <form id="application-form" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">이름 *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="form-input" placeholder="이름을 입력하세요">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="role" class="block text-sm font-semibold text-gray-700 mb-2">지원 분야 *</label>
+                            <select id="role" name="role" required class="form-input">
+                                <option value="">지원 분야를 선택하세요</option>
+                                <option value="dreamer">Dreamer (기획자 - Product Manager, Business Analyst)</option>
+                                <option value="developer">Developer (개발자 - Frontend, Backend, Full-stack)</option>
+                                <option value="designer">Designer (디자이너 - UI/UX, Visual, Product)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="company" class="block text-sm font-semibold text-gray-700 mb-2">회사명 *</label>
+                            <input type="text" id="company" name="company" required 
+                                   class="form-input" placeholder="소속 회사를 입력하세요">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="department" class="block text-sm font-semibold text-gray-700 mb-2">부서명</label>
+                            <input type="text" id="department" name="department" 
+                                   class="form-input" placeholder="소속 부서를 입력하세요">
+                        </div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="form-group">
+                            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">이메일 *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="form-input" placeholder="연락 가능한 이메일을 입력하세요">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="block text-sm font-semibold text-gray-700 mb-2">연락처 *</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   class="form-input" placeholder="연락처를 입력하세요">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group agent-field" style="display: none;">
+                        <label for="agent-name" class="block text-sm font-semibold text-gray-700 mb-2">
+                            AI Agent명 *
+                            <span class="text-sm text-blue-600 font-normal">(Dreamer 필수)</span>
+                        </label>
+                        <input type="text" id="agent-name" name="agent-name" class="form-input" placeholder="개발하고자 하는 AI Agent의 이름을 입력해주세요
+
+예시:
+- WorkMate (AI 업무 도우미)
+- CommuniBot (사내 커뮤니케이션 AI)
+- WelfareGuide (복지 안내 AI)">
+                    </div>
+                    
+                    <div class="form-group tech-field" style="display: none;">
+                        <label for="tech-summary" class="block text-sm font-semibold text-gray-700 mb-2">
+                            보유 역량 요약 *
+                            <span class="text-sm text-green-600 font-normal">(Developer/Designer 필수)</span>
+                        </label>
+                        <textarea id="tech-summary" name="tech-summary" rows="4" class="form-input" placeholder="보유 기술 스택, 프로젝트 경험, 특기 등을 구체적으로 작성해주세요
+
+개발자 예시:
+- Frontend: React, Vue.js, TypeScript (3년)
+- Backend: Node.js, Python, AWS (2년)
+- Database: MongoDB, PostgreSQL
+
+디자이너 예시:
+- UI/UX: Figma, Sketch, Adobe XD (4년)
+- Prototyping: Framer, Principle
+- 모바일/웹 디자인 프로젝트 10+ 경험"></textarea>
+                    </div>
+                    
+                    <!-- File Upload Area -->
+                    <div class="form-group">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">
+                            <i class="fas fa-paperclip mr-2"></i>
+                            서류 제출
+                        </label>
+                        <p class="text-sm text-gray-600 mb-4">작성한 참가신청서와 관련 서류를 업로드해주세요.</p>
+                        
+                        <div class="upload-area">
+                            <i class="fas fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
+                            <p class="text-lg font-semibold text-gray-700 mb-2">파일을 드래그하거나 클릭하여 업로드</p>
+                            <p class="text-sm text-gray-500">지원 형식: PDF, DOC, DOCX, ZIP (최대 10MB)</p>
+                            <input type="file" id="file-upload" multiple accept=".pdf,.doc,.docx,.zip" class="hidden">
+                        </div>
+                        
+                        <div class="file-list mt-4 space-y-2"></div>
+                    </div>
+                    
+                    <!-- Agreement -->
+                    <div class="form-group">
+                        <label class="flex items-start">
+                            <input type="checkbox" required class="mt-1 mr-3 text-blue-600">
+                            <span class="text-sm text-gray-700">
+                                개인정보 수집 및 이용에 동의하며, 해커톤 참가 규정을 준수하겠습니다.
+                                <a href="#" class="text-blue-600 hover:underline">자세히 보기</a>
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-12 py-4 rounded-lg font-semibold text-lg transition-colors transform hover:scale-105">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            참가 신청 제출
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl md:text-6xl font-black text-gray-900 mb-12">❓ 자주 묻는 질문</h2>
+                <p class="text-2xl font-bold text-gray-700 mb-12">WX해커톤 2025에 대한 궁금한 점들을 해결해보세요</p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="faq-item bg-gradient-to-r from-blue-50 to-white border-2 border-blue-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-blue-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🎯 해커톤은 무엇인가요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-blue-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-blue-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">해커톤(Hackathon)은 'Hack'(해킹)과 'Marathon'(마라톤)의 합성어로, 개발자, 디자이너, 기획자가 팀을 이뤄 제한된 시간 내에 아이디어를 구현하는 이벤트입니다. WX해커톤 2025는 포스코그룹 임직원들이 AI 에이전트와 관련된 혁신적인 솔루션을 개발하는 대회입니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="faq-item bg-gradient-to-r from-green-50 to-white border-2 border-green-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-green-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">📍 해커톤은 어디서 진행되나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-green-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-green-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">포스코인재창조원 송도캠퍼스(인천광역시 연수구 아트센터대로 165)에서 진행됩니다. 최신 시설을 갖춘 교육 공간에서 집중적인 개발 환경을 제공합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="faq-item bg-gradient-to-r from-purple-50 to-white border-2 border-purple-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-purple-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🏠 숙박은 어떻게 해결하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-purple-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-purple-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">숙박을 원하시는 분은 포스코인재창조원 게스트하우스를 이용하실 수 있습니다. 신청 시 숙박 희망 여부를 체크해 주시면 됩니다. 개인적으로 다른 숙소를 이용하셔도 무방합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="faq-item bg-gradient-to-r from-orange-50 to-white border-2 border-orange-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-orange-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">👥 누가 참가할 수 있나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-orange-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-orange-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">포스코그룹 전 계열사 임직원이면 누구나 참가할 수 있습니다. 개발 경험이나 디자인 경험이 없어도 괜찮으며, 기획 아이디어나 열정만 있다면 충분히 참가 가능합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="faq-item bg-gradient-to-r from-pink-50 to-white border-2 border-pink-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-pink-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🤝 팀은 어떻게 구성되나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-pink-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-pink-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">개인별로 신청을 받은 후, 선발된 아이디어를 중심으로 기획자 1명 + 개발자 2명 + 디자이너 1명(총 4명)으로 팀을 구성합니다. 운영진이 역량과 경험을 고려하여 최적의 팀 매칭을 진행합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 6 -->
+                <div class="faq-item bg-gradient-to-r from-indigo-50 to-white border-2 border-indigo-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-indigo-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">⚡ 선발 과정은 어떻게 되나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-indigo-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-indigo-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">기획자는 아이디어 중심의 심사를 받고, 개발자와 디자이너는 포트폴리오 기반 심사를 받습니다. 1차 서류심사를 통해 후보자를 선별한 후, 전문 심사위원과 임직원 투표를 통해 최종 15개 팀(60명)을 선발합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 7 -->
+                <div class="faq-item bg-gradient-to-r from-teal-50 to-white border-2 border-teal-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-teal-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🎓 멘토링은 어떻게 받나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-teal-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-teal-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">각 팀마다 전담 멘토가 배정됩니다. 해커톤 진행 중 기술적 문제나 기획 방향에 대한 조언을 받을 수 있으며, 24시간 멘토링 지원을 받을 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 8 -->
+                <div class="faq-item bg-gradient-to-r from-rose-50 to-white border-2 border-rose-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-rose-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">📅 일정이 어떻게 되나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-rose-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-rose-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">신청: 9월 17일~24일, 심사: 9월 25일~10월 2일, 팀 밋업: 10월 14일, 사전학습: 10월 15일~11월 5일, 본선 해커톤: 11월 6일~7일(2일간) 순으로 진행됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 9 -->
+                <div class="faq-item bg-gradient-to-r from-cyan-50 to-white border-2 border-cyan-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-cyan-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🕒 근무시간에 어떻게 참여하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-cyan-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-cyan-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">사전학습 기간(10월 15일~11월 5일) 중에는 온라인 참여가 가능하며, 본선 해커톤(11월 6일~7일)은 교육 참가로 인정되어 공식 참가 가능합니다. 사전에 팀장/상사와 협의하여 참가 승인을 받아주세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 10 -->
+                <div class="faq-item bg-gradient-to-r from-amber-50 to-white border-2 border-amber-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-amber-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">✅ 참석은 꼭 해야 하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-amber-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-amber-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">팀 밋업(10월 14일)과 본선 해커톤(11월 6일~7일)은 필수 참석입니다. 사전학습은 온라인으로도 참가 가능하며, 개인 일정에 따라 조정할 수 있습니다. 단, 무단결석 시 참가 자격이 박탈될 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 11 -->
+                <div class="faq-item bg-gradient-to-r from-emerald-50 to-white border-2 border-emerald-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-emerald-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">💻 어떤 개발 도구를 사용하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-emerald-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-emerald-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">개발 도구는 자유롭게 선택 가능합니다. 각종 클라우드 서비스, 오픈소스 라이브러리, AI/ML 도구 등을 활용할 수 있으며, 필요시 유료 도구의 크레딧도 제공됩니다. 개인 노트북 지참을 권장하며, 필요시 개발 장비 대여도 가능합니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 12 -->
+                <div class="faq-item bg-gradient-to-r from-violet-50 to-white border-2 border-violet-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-violet-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🎒 준비물은 무엇인가요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-violet-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-violet-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">개인 노트북(충전기 포함), 개발/디자인에 필요한 소프트웨어, 개인 위생용품, 갈아입을 옷가지 정도입니다. 식사와 간식은 제공되며, 개발에 필요한 기본 도구들은 현장에서 지원됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 13 -->
+                <div class="faq-item bg-gradient-to-r from-fuchsia-50 to-white border-2 border-fuchsia-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-fuchsia-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🚨 안전 수칙이 있나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-fuchsia-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-fuchsia-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">마스크 착용, 개인 위생관리, 컨디션 난조시 휴식 등 기본 안전수칙을 준수해야 합니다. 응급상황 발생시 즉시 운영진에게 신고하고, 시설 이용 시 안전사고 예방에 협조해 주세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 14 -->
+                <div class="faq-item bg-gradient-to-r from-sky-50 to-white border-2 border-sky-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-sky-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🍽️ 식사는 어떻게 해결하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-sky-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-sky-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">해커톤 기간 중 모든 식사(아침, 점심, 저녁)와 간식, 음료가 제공됩니다. 다양한 메뉴로 구성된 케이터링 서비스를 이용하며, 알레르기나 특별한 식단이 필요한 경우 사전에 알려주세요.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 15 -->
+                <div class="faq-item bg-gradient-to-r from-lime-50 to-white border-2 border-lime-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-lime-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">🏆 시상은 어떻게 되나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-lime-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-lime-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">1등팀은 MacBook Pro 16인치, 2등팀은 MacBook Air 13인치, 3등팀은 Mac Mini를 시상품으로 받습니다. 모든 참가자에게는 WX 굿즈박스가 제공되며, 참가증명서도 발급됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 16 -->
+                <div class="faq-item bg-gradient-to-r from-stone-50 to-white border-2 border-stone-200 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="faq-question p-8 cursor-pointer flex items-center justify-between hover:bg-stone-50/50 transition-colors duration-300">
+                        <h3 class="text-xl font-bold text-gray-900 pr-4">❓ 추가 문의는 어떻게 하나요?</h3>
+                        <i class="fas fa-chevron-down faq-icon text-stone-600 text-xl transition-transform duration-300"></i>
+                    </div>
+                    <div class="faq-answer px-8 pb-8">
+                        <div class="bg-white rounded-xl p-6 border-l-4 border-stone-500">
+                            <p class="text-gray-700 text-lg leading-relaxed">포스코인재창조원 안서희 사원(seoha@poscohrd.com)으로 문의해 주세요. 해커톤 관련 모든 궁금한 사항에 대해 친절하게 안내드립니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Simplified Footer with Contact Only -->
+    <footer class="bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Contact Section -->
+            <div class="mb-12">
+                <h3 class="text-3xl font-bold text-white mb-8">📧 문의하기</h3>
+                <div class="inline-flex items-center justify-center space-x-6 bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl hover:bg-white/20 transition-all duration-500 hover:scale-105">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-envelope text-white text-2xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-white font-bold text-xl mb-1">포스코인재창조원 안서희 사원</p>
+                        <a href="mailto:seoha@poscohrd.com" class="text-blue-300 hover:text-blue-200 transition-colors text-lg font-semibold hover:underline">
+                            seoha@poscohrd.com
+                        </a>
+                    </div>
+                </div>
+                <p class="text-gray-300 text-lg mt-6 font-medium">
+                    🚀 해커톤 관련 모든 문의사항은 위 담당자에게 연락주세요!
+                </p>
+            </div>
+            
+            <!-- Minimal Copyright -->
+            <div class="pt-8 border-t border-white/20">
+                <p class="text-gray-300 text-lg">
+                    © 2025 포스코그룹 WX해커톤. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Background Music (어벤져스 스타일 웅장한 음악) -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music/avengers-epic-music.mp3" type="audio/mpeg">
+        브라우저가 오디오를 지원하지 않습니다.
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="fixed bottom-8 left-8 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-110 z-50" title="🎵 어벤져스 스타일 웅장한 음악">
+        <i class="fas fa-volume-mute text-xl" id="musicIcon"></i>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-all transform hover:scale-110 hidden z-50" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Download functions for application forms
+        // 기획자 지원서 다운로드
+        function downloadPlannerForm() {
+            const content = `WX해커톤 2025 기획자 지원서 PPT 양식
+
+================================
+WX해커톤 2025 기획자 지원서 (PPT 양식)
+================================
+
+※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
+
+슬라이드 1: 표지
+- WX해커톤 2025 기획자 지원서
+- 성명: 
+- 소속: 
+- 연락처 & 이메일: 
+
+슬라이드 2: 기획 경험 및 역량
+- 주요 기획/PM 경력
+- 보유 기획 도구 (Figma, Miro, Notion 등)
+- 데이터 분석 경험
+- 프로젝트 관리 경험
+
+슬라이드 3: 문제 해결 능력
+- 복잡한 문제를 해결한 사례
+- 사용자 요구사항 분석 경험
+- 우선순위 설정 및 의사결정 사례
+
+슬라이드 4: 참가 동기 & 목표
+- 해커톤 참가 동기
+- 기획자로서 달성하고 싶은 목표
+- 팀 협업에서의 역할
+
+슬라이드 5: 아이디어 제안 (선택사항)
+- 관심 있는 문제 영역
+- 제안하고 싶은 솔루션 아이디어
+- 기대하는 팀 구성 (개발자/디자이너)
+
+※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
+            
+            downloadFile('WX해커톤2025_기획자지원서_PPT양식.txt', content, 'text/plain');
+            showNotification('기획자 지원서 PPT 양식이 다운로드되었습니다.', 'success');
+        }
+
+        // 개발자 지원서 다운로드
+        function downloadDeveloperForm() {
+            const content = `WX해커톤 2025 개발자 지원서 PPT 양식
+
+================================
+WX해커톤 2025 개발자 지원서 (PPT 양식)
+================================
+
+※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
+
+슬라이드 1: 표지
+- WX해커톤 2025 개발자 지원서
+- 성명: 
+- 소속: 
+- 연락처 & 이메일: 
+
+슬라이드 2: 기술 스택 & 경험
+- 주요 프로그래밍 언어
+- 프론트엔드/백엔드 경험
+- 데이터베이스 & 클라우드 경험
+- 개발 도구 (Git, IDE 등)
+
+슬라이드 3: 프로젝트 경험
+- 주요 개발 프로젝트 (3개 내외)
+- 각 프로젝트에서의 역할과 기술
+- 문제 해결 사례
+- 성과 및 학습 내용
+
+슬라이드 4: 참가 동기 & 목표
+- 해커톤 참가 동기
+- 개발자로서 달성하고 싶은 목표
+- 새로 도전하고 싶은 기술
+
+슬라이드 5: 아이디어 제안 (선택사항)
+- 구현하고 싶은 기술적 솔루션
+- 관심 있는 개발 영역
+- 기대하는 팀 구성 (기획자/디자이너)
+
+※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
+            
+            downloadFile('WX해커톤2025_개발자지원서_PPT양식.txt', content, 'text/plain');
+            showNotification('개발자 지원서 PPT 양식이 다운로드되었습니다.', 'success');
+        }
+
+        // 디자이너 지원서 다운로드
+        function downloadDesignerForm() {
+            const content = `WX해커톤 2025 디자이너 지원서 PPT 양식
+
+================================
+WX해커톤 2025 디자이너 지원서 (PPT 양식)
+================================
+
+※ 아래 내용을 PPT 슬라이드로 제작해주세요 ※
+
+슬라이드 1: 표지
+- WX해커톤 2025 디자이너 지원서
+- 성명: 
+- 소속: 
+- 연락처 & 이메일: 
+- 포트폴리오 URL: 
+
+슬라이드 2: 디자인 경험 & 툴
+- 주요 디자인 분야 (UI/UX, 그래픽, 프로덕트 등)
+- 보유 디자인 툴 (Figma, Adobe CC, Sketch 등)
+- 프로토타이핑 경험
+- 디자인 시스템 구축 경험
+
+슬라이드 3: 포트폴리오 하이라이트
+- 대표 디자인 프로젝트 (3개 내외)
+- 각 프로젝트의 목표와 해결 과정
+- 사용자 리서치 및 테스트 경험
+- 디자인 임팩트 및 성과
+
+슬라이드 4: 참가 동기 & 목표
+- 해커톤 참가 동기
+- 디자이너로서 달성하고 싶은 목표
+- 새로 시도하고 싶은 디자인 접근법
+
+슬라이드 5: 아이디어 제안 (선택사항)
+- 관심 있는 사용자 경험 영역
+- 제안하고 싶은 디자인 솔루션
+- 기대하는 팀 구성 (기획자/개발자)
+
+※ PPT 파일로 작성 후 온라인 신청 시 업로드해주세요 ※`;
+            
+            downloadFile('WX해커톤2025_디자이너지원서_PPT양식.txt', content, 'text/plain');
+            showNotification('디자이너 지원서 PPT 양식이 다운로드되었습니다.', 'success');
+        }
+        
+        // 역할별 가이드 함수 제거됨
+    </script>
+</body>
+</html>
