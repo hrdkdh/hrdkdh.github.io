@@ -343,7 +343,7 @@ body {
 
 /* Mobile Menu */
 .mobile-menu {
-    transform: translateY(-100%);
+    /* transform: translateY(-50%); */
     transition: transform 0.3s ease;
 }
 

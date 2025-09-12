@@ -46,12 +46,12 @@ function initMobileMenu() {
             if (mobileMenu.classList.contains('hidden')) {
                 // 메뉴 닫힘 - 햄버거 아이콘
                 svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-                svg.className = isInHero ? 'w-6 h-6 text-white' : 'w-6 h-6 text-gray-700';
+                svg.classList = isInHero ? 'w-6 h-6 text-white' : 'w-6 h-6 text-gray-700';
             } else {
                 // 메뉴 열림 - X 아이콘
                 svg.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-                svg.className = isInHero ? 'w-6 h-6 text-white' : 'w-6 h-6 text-gray-700';
-                
+                svg.classList = isInHero ? 'w-6 h-6 text-white' : 'w-6 h-6 text-gray-700';
+
                 // 모바일 메뉴 배경색도 현재 위치에 따라 설정
                 const mobileMenuContent = mobileMenu.querySelector('div');
                 if (mobileMenuContent) {
