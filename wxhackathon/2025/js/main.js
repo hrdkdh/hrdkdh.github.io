@@ -225,14 +225,13 @@ function initFileUpload() {
 
 // Handle File Selection
 function handleFileSelection(files) {
-    const fileList = document.querySelector('.file-list');
-    const maxSize = 10 * 1024 * 1024; // 10MB
-    const allowedTypes = ['.pdf', '.doc', '.docx', '.zip'];
+    const maxSize = 50 * 1024 * 1024; // 50MB
+    const allowedTypes = ['.ppt', '.pptx', '.doc', '.docx', '.pdf', '.zip'];
     
     Array.from(files).forEach(file => {
         // Validate file size
         if (file.size > maxSize) {
-            showNotification('파일 크기는 10MB 이하여야 합니다.', 'error');
+            showNotification('파일 크기는 50MB 이하여야 합니다.', 'error');
             return;
         }
         
@@ -324,7 +323,7 @@ function initFormSubmission() {
                 cellphone: document.querySelector('#phone').value,
                 agent_name: document.querySelector('#agent-name').value,
                 tech_summary: document.querySelector('#tech-summary').value
-            }).then(function (response) {
+            }).then(async function (response) {
                 if (response.data.result !== 'success') {
                     // Reset button
                     submitButton.innerHTML = originalText;
@@ -337,13 +336,16 @@ function initFormSubmission() {
                 submitButton.innerHTML = originalText;
                 submitButton.disabled = false;
 
+                // 파일이 있을 경우 업로드 처리 (완료될 때까지 대기)
+                await submitFileUpload(response.data.id);
+                
                 // Show success message
                 showNotification('참가 신청서가 성공적으로 제출되었습니다!', 'success');
-                                
+
                 // Reset form
                 document.querySelector('#application-form').reset();
                 toggleRoleFields(''); // Hide all conditional fields
-                                
+                
                 // Clear file list
                 const fileList = document.querySelector('.file-list');
                 if (fileList) {
@@ -359,6 +361,81 @@ function initFormSubmission() {
             });
         });
     }
+}
+
+//파일 업로드 구현
+async function submitFileUpload(data_id) {
+    const fileInput = document.querySelector('#file-upload');
+
+    // No files: exit silently
+    if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+        return;
+    }
+
+    // Create overlay and lock scroll
+    const overlay = document.createElement('div');
+    overlay.id = 'upload-overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.inset = '0';
+    overlay.style.background = 'rgba(0,0,0,0.5)';
+    overlay.style.zIndex = '9999';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+
+    const modal = document.createElement('div');
+    modal.id = 'upload-modal';
+    modal.style.background = '#ffffff';
+    modal.style.color = '#111827';
+    modal.style.padding = '20px 28px';
+    modal.style.borderRadius = '12px';
+    modal.style.boxShadow = '0 10px 30px rgba(0,0,0,0.2)';
+    modal.style.fontWeight = '700';
+    modal.textContent = '파일 업로드 중입니다...';
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    try {
+        const formData = new FormData();
+        Array.from(fileInput.files).forEach((f) => {
+            formData.append('file', f);
+        });
+
+        // Let the browser set the correct multipart boundary
+        const response = await axios.post(`https://wxsurvey.kr/api/wxhackathon_upload/${data_id}`, formData);
+        if (response.data.result !== 'success') {
+            showNotification('파일 업로드에 실패했습니다. 다시 시도해주세요.', 'error');
+            return;
+        }
+        showNotification('파일이 성공적으로 업로드되었습니다!', 'success');
+    } catch (error) {
+        console.log(error);
+        showNotification('파일 업로드 중 오류가 발생했습니다. 다시 시도해주세요.', 'error');
+    } finally {
+        // Remove overlay and restore scroll
+        try { overlay.remove(); } catch (e) {}
+        document.body.style.overflow = previousOverflow || '';
+    }
+}
+
+//테스트를 위한 폼값 랜덤 키인
+function randomKeyIn() {
+    const names = ['홍길동', '김철수', '이영희', '박민수', '최지우'];
+    const companies = ['포스코', '네이버', '카카오', '삼성전자', 'LG전자'];
+    const departments = ['개발팀', '디자인팀', '기획팀', '마케팅팀', '영업팀'];
+    const roles = ['dreamer', 'developer', 'designer'];
+    const randomIndex = (arr) => Math.floor(Math.random() * arr.length);
+    document.querySelector('#name').value = names[randomIndex(names)];
+    document.querySelector('#company').value = companies[randomIndex(companies)];
+    document.querySelector('#department').value = departments[randomIndex(departments)];
+    document.querySelector('#role').value = roles[randomIndex(roles)];
+    document.querySelector('#email').value = `test${randomIndex(1000)}@example.com`;
+    document.querySelector('#phone').value = `010-${randomIndex(10000)}-${randomIndex(10000)}`;
+    document.querySelector('#agent-name').value = names[randomIndex(names)];
+    document.querySelector('#tech-summary').value = 'AI, ML, Web Development';
 }
 
 // Toggle role-specific fields
