@@ -338,10 +338,13 @@ function initFormSubmission() {
                 submitButton.disabled = false;
 
                 // 파일이 있을 경우 업로드 처리 (완료될 때까지 대기)
-                await submitFileUpload(response.data.id);
-                
-                // Show success message
-                showNotification('참가 신청서가 성공적으로 제출되었습니다!', 'success');
+                var uploadSuccess = await submitFileUpload(response.data.id);
+                if (!uploadSuccess) {
+                    alert('참가 신청서는 성공적으로 제출되었으나 파일 전송에는 실패했습니다. 파일은 이메일로 따로 전달해 주세요(DRM해제 必).');
+                } else {
+                    // Show success message
+                    showNotification('참가 신청서가 성공적으로 제출되었습니다!', 'success');
+                }
 
                 // Reset form
                 document.querySelector('#application-form').reset();
@@ -411,13 +414,15 @@ async function submitFileUpload(data_id) {
         if (!response.data || response.data.result !== 'success') {
             showNotification('파일 업로드에 실패했습니다. 다시 시도해주세요.', 'error');
             alert('파일 업로드에 실패했습니다. 다시 시도해주세요.');
-            return;
+            return false;
         }
         showNotification('파일이 성공적으로 업로드되었습니다!', 'success');
+        return true;
     } catch (error) {
         console.log(error);
         showNotification('파일 업로드 중 오류가 발생했습니다. 다시 시도해주세요.', 'error');
         alert('파일 업로드 중 오류가 발생했습니다. 다시 시도해주세요.');
+        return false;
     } finally {
         // Remove overlay and restore scroll
         try { overlay.remove(); } catch (e) {}
